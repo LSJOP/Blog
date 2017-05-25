@@ -7,6 +7,7 @@ admin.autodiscover()
 
 #patterns()函数接收两个元组（URL 正则表达式,目标)
 urlpatterns = patterns('',
+     (r'^$','django.views.generic.simple.redirect_to',{'url':'/blog/'}),
     # Example:
      (r'^blog/', include('blog.urls')),
 

@@ -12,8 +12,11 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
+import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,19 +28,24 @@ SECRET_KEY = 'm#z!*6@gh7tt%cyx2atxz8(i=391br^mhehq9u@iilmghyy+xj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-)
+    'blog',  # 注册博客应用
+    'extra_apps.xadmin',  # 注册xadmin
+    'crispy_forms',  # 注册crispy_forms
+    'reversion',
+    'DjangoUeditor',  # 百度的html编辑器
+]
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -52,10 +60,16 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'Blog.urls'
 
+# 设置静态文件路径
+STATIC_URL = 'apps/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'apps/static')]
+STATIC_ROOT = '/var/www/Blog/static/'
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'apps/templates')],  # 设置模板路径
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +90,12 @@ WSGI_APPLICATION = 'Blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Blog',
+        'USER': 'root',
+        'PASSWORD': '809588434AIBeta',
+        'HOST': 'rm-wz937w0yx6c60b7i2o.mysql.rds.aliyuncs.com',
+        'PORT': '3306',
     }
 }
 
@@ -85,14 +103,10 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+LANGUAGE_CODE = 'zh-Hans'  # 中国语言
+TIME_ZONE = 'Asia/Shanghai'  # 上海时间
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 

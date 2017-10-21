@@ -34,15 +34,15 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',  # 注册博客应用
-    'extra_apps.xadmin',  # 注册xadmin
-    'crispy_forms',  # 注册crispy_forms
+    'blog',           # 注册博客应用
+    'xadmin',         # 注册xadmin
+    'crispy_forms',   # 注册crispy_forms
     'reversion',
     'DjangoUeditor',  # 百度的html编辑器
 ]
@@ -56,6 +56,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    "utils.middleware.UrlPathRecordMiddleware",  # 记录用户ip地址中间件
+    "utils.middleware.ExceptionMiddleware",
 )
 
 ROOT_URLCONF = 'Blog.urls'
@@ -96,6 +98,8 @@ DATABASES = {
         'PASSWORD': '809588434AIBeta',
         'HOST': 'rm-wz937w0yx6c60b7i2o.mysql.rds.aliyuncs.com',
         'PORT': '3306',
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 

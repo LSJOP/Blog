@@ -34,31 +34,34 @@
 
                 <div class="pagination">
                     <ul>
-                        <li><a href="">1</a></li>
-                        <li><a href="">...</a></li>
-                        <li><a href="">4</a></li>
-                        <li><a href="">5</a></li>
-                        <li class="current"><a href="">6</a></li>
-                        <li><a href="">7</a></li>
-                        <li><a href="">8</a></li>
-                        <li><a href="">...</a></li>
-                        <li><a href="">11</a></li>
+                        {% if goods.has_previous %}
+				            <a href="/{{ Article_obj_list.previous_page_number }}/">&lt;上一页</a>
+                        {% endif %}
+                    {% for pindex in pages %}
+                        {% if pindex == goods.number %}
+                        <li><a href="/{{ pindex }}" class="current">{{ pindex }}</a></li>
+                        {% else %}
+                        <li><a href="/{{ pindex }}" >{{ pindex }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                     {% if goods.has_next %}
+				         <a href="/{{ Article_obj_list.next_page_number }}/">下一页&gt;</a>
+                     {% endif %}
                     </ul>
                 </div>
+
+
+
             </main>
             <aside class="col-md-4">
                 <div class="widget widget-recent-posts">
                     <h3 class="widget-title">最新文章</h3>
                     <ul>
+                        {% for article in New_Article_List %}
                         <li>
-                            <a href="#">Django 博客开发入门教程：前言</a>
+                            <a href="/blog/{{ article.id }}/">{{ article.title }}</a>
                         </li>
-                        <li>
-                            <a href="#">Django 博客使用 Markdown 自动生成文章目录</a>
-                        </li>
-                        <li>
-                            <a href="#">部署 Django 博客</a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="widget widget-archives">
@@ -79,9 +82,9 @@
                 <div class="widget widget-category">
                     <h3 class="widget-title">分类</h3>
                     <ul>
-                        {% for class in Classfiy %}
+                        {% for class in Classfiy_List %}
                             <li>
-                                <a href="#">{{ class.name }}<span class="post-count">(13)</span></a>
+                                <a href="">{{ class.name }}<span class="post-count">({{ class.sum }})</span></a>
                             </li>
                         {% endfor %}
                     </ul>
@@ -90,11 +93,11 @@
                 <div class="widget widget-tag-cloud">
                     <h3 class="widget-title">标签云</h3>
                     <ul>
-
+                        {% for tag in tags %}
                         <li>
-                            <a href="#">{{ Article_obj.tags }}</a>
+                            <a href="#">{{ tag }}</a>
                         </li>
-
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="rss">

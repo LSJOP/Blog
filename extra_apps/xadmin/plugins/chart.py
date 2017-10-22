@@ -25,7 +25,7 @@ class ChartWidget(ModelBaseWidget):
     template = 'xadmin/widgets/chart.html'
     widget_icon = 'fa fa-bar-chart-o'
 
-    def convert(self, data):
+    def convert(self, data: object) -> object:
         self.list_params = data.pop('params', {})
         self.chart = data.pop('chart', None)
 

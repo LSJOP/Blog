@@ -95,8 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Blog',
         'USER': 'root',
-        'PASSWORD': '809588434AIBeta',
-        'HOST': 'rm-wz937w0yx6c60b7i2o.mysql.rds.aliyuncs.com',
+
         'PORT': '3306',
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
@@ -111,7 +110,7 @@ LANGUAGE_CODE = 'zh-Hans'  # 中国语言
 TIME_ZONE = 'Asia/Shanghai'  # 上海时间
 USE_I18N = True
 USE_L10N = True
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

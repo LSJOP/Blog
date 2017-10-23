@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base_right.html' %}
 {% block title %}博客{% endblock title %}
 {% block body_id %}<body id="single">{% endblock body_id %}
 {% block son %}
@@ -62,61 +62,18 @@
                     </div>
                 </section>
             </main>
-            <aside class="col-md-4">
-                <div class="widget widget-content">
-                    <h3 class="widget-title">文章目录</h3>
-                    <a href="">{{ article.toc|safe }}</a>
-                </div>
-                <div class="widget widget-recent-posts">
-                    <h3 class="widget-title">最新文章</h3>
-                    <ul>
-                        {% for article in New_Article_List %}
-                        <li>
-                            <a href="/blog/{{ article.id }}/">{{ article.title }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="widget widget-archives">
-                    <h3 class="widget-title">归档</h3>
-                    <ul>
-                        <li>
-                            <a href="#">2017 年 5 月</a>
-                        </li>
-                        <li>
-                            <a href="#">2017 年 4 月</a>
-                        </li>
-                        <li>
-                            <a href="#">2017 年 3 月</a>
-                        </li>
-                    </ul>
-                </div>
+            {% block sun %}
+            
+            <!-- 博客页面 -->
+            {% block toc %}<!-- 给文章目录的预留块 -->
+            <div class="widget widget-content">
+                <h3 class="widget-title">文章目录</h3>
+                <a href="">{{ article.toc|safe }}</a>
+            </div>
+            {% endblock toc %}
 
-                <div class="widget widget-category">
-                    <h3 class="widget-title">分类</h3>
-                    <ul>
-                        {% for class in Classfiy_List %}
-                            <li>
-                                <a href="">{{ class.name }}<span class="post-count">({{ class.sum }})</span></a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+            {% endblock sun %}
 
-                <div class="widget widget-tag-cloud">
-                    <h3 class="widget-title">标签云</h3>
-                    <ul>
-                        {% for tag in tags %}
-                        <li>
-                            <a href="#">{{ tag }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="rss">
-                    <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
-                </div>
-            </aside>
         </div>
     </div>
 </div>

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{%load static from staticfiles%}
+{% block son %}
+
+{% block sun %}
+            <aside class="col-md-4">
+                {% block toc %}<!-- 给文章目录的预留块 -->{% endblock toc %}
+
+                <div class="widget widget-recent-posts">
+                    <h3 class="widget-title">最新文章</h3>
+                    <ul>
+                        {% for article in New_Article_List %}
+                        <li>
+                            <a href="/blog/{{ article.id }}/">{{ article.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="widget widget-archives">
+                    <h3 class="widget-title">归档</h3>
+                    <ul>
+                        <li>
+                            <a href="#">2017 年 5 月</a>
+                        </li>
+                        <li>
+                            <a href="#">2017 年 4 月</a>
+                        </li>
+                        <li>
+                            <a href="#">2017 年 3 月</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget widget-category">
+                    <h3 class="widget-title">分类</h3>
+                    <ul>
+                        {% for class in Classfiy_List %}
+                            <li>
+                                <a href="/classfiy/{{ class.id }}">{{ class.name }}<span class="post-count">({{ class.sum }})</span></a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="widget widget-tag-cloud">
+                    <h3 class="widget-title">标签云</h3>
+                    <ul>
+                        {% for tag in tags %}
+                        <li>
+                            <a href="/tags/{{ tag.id }}">{{ tag }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="rss">
+                    <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
+                </div>
+            </aside>
+{% endblock sun %}
+
+{% endblock son %}

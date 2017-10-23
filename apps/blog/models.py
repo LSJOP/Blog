@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 import markdown
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
-from django.core.paginator import Paginator
 from django.db.models import Sum
 # Create your models here.
 
@@ -101,32 +100,6 @@ class ArticleManager(BaseManager):
         article.toc = md.toc  # 文章目录
         return article
 
-    def get_page(self, pindex, Article_obj_list):
-        """将博客进行分页"""
-        if type(pindex) is str:
-            pindex = 1
-        # 分页
-        paginator = Paginator(Article_obj_list, 4)
-        # 获取第pindex页内容
-        Article_obj_list = paginator.page(int(pindex))  # 返回pindex页的page实例对象
-        # 获取分页后的总数
-        nums_pages = paginator.num_pages
-        # 控制页码
-        pindex = int(pindex)
-        if nums_pages < 5:
-            # 如果页面不足5页则全部显示
-            pages = range(1, nums_pages + 1)
-        elif pindex <= 3:
-            # 当前页前三页，显示前五页
-            pages = range(1, 6)
-        elif nums_pages - pindex <= 2:  # 10 9 8 7
-            # 当前页是后三页, 显示后五页
-            pages = range(nums_pages - 4, nums_pages + 1)
-        else:
-            # 其他情况,显示当前页的前两页和后两页,当前页
-            pages = range(pindex - 2, pindex + 3)
-        return pages, Article_obj_list
-
     def add_read_num(self, article_id):
         """增加文章阅读量"""
         article_obj = self.get_one_article(article_id=article_id)  # 根据文章id获取到文章
@@ -139,6 +112,22 @@ class ArticleManager(BaseManager):
         article_list = article_list.filter(pub_date__year=year, pub_date__month=month)
         if article_list.exists():
             return article_list
+        else:
+            return None
+
+    def get_article_by_tags(self, tags_id):
+        """根据标签id或分类id获取文章"""
+        article_obj_list = self.get_list_object(filters={'tags': tags_id})
+        if article_obj_list.exists():
+            return article_obj_list
+        else:
+            return None
+
+    def get_article_by_classfiy(self, classfiy_id):
+        """根据标签获取文章"""
+        article_obj_list = self.get_list_object(filters={'classfiy': classfiy_id})
+        if article_obj_list.exists():
+            return article_obj_list
         else:
             return None
 

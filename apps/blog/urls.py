@@ -7,9 +7,9 @@ urlpatterns = [
     url(r'^blog/(\d+)/$', view=blog),     # 博客页面
     url(r'^contact/$', view=Contact),     # 联系页面
     url(r'^comment/$', view=Comment),     # 用户评论
-    url(r'(?P<pindex>\d*)', view=index),  # 显示博客首页
+    url(r'^tags/(\d+)$', view=tags),      # 根据标签查询
+    url(r'^classfiy/(\d+)', view=classfiy),   # 根据分类显示
+    url(r'\w+', view=not_found),              # 404页面
+    url('(?P<pindex>\d*)|[/]', view=index),   # 显示博客首页
     # url(r'^tidy/(?P<year>\d*)/(?P<month>\d*)', view=tidy),  # 根据归档显示
-    # url(r'^classfiy/(?P<classfiy>\w)', view=classfiy),      # 根据分类显示
-    # url(r'^tags/(?<tags>\w)', view=tags),  # 根据标签查询
-    url(r'', view=not_found),              # 404页面
 ]

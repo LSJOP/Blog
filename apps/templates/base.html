@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {%load static from staticfiles%}
-    <title>{% block title %}Black &amp; White{% endblock title %}</title>
+{%load static from staticfiles%}
+<title>{% block title %}Black &amp; White{% endblock title %}</title>
 
-    <!-- meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- css -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link rel="stylesheet" href="{% static 'css/pace.css' %}">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <link rel="stylesheet" href="{% static 'css/rewrite.css' %}">
-    <link rel="stylesheet" href="{% static 'css/highlights/github.css' %}">
-    <!-- js -->
-    <script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/pace.min.js' %}"></script>
-    <script src="{% static 'js/modernizr.custom.js' %}"></script>
+<!-- css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href='{% static "ionicons-2.0.1/css/ionicons.min.css" %}'>
+<link rel="stylesheet" href="{% static 'css/pace.css' %}">
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+<link rel="stylesheet" href="{% static 'css/rewrite.css' %}">
+<link rel="stylesheet" href="{% static 'css/highlights/github.css' %}">
+
+<!-- js -->
+<script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/pace.min.js' %}"></script>
+<script src="{% static 'js/modernizr.custom.js' %}"></script>
 </head>
+
 {% block body %}
 {% block body_id %}<body><!-- 因为有的页面的body有绑定id所以设置预留块以便替换 -->{% endblock body_id %}
 {% block block %}
@@ -63,11 +65,11 @@
         </div>
     </header>
 </div>
-<!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>-->
-<!--<div class="copyrights">Modified by <a href="http://zmrenwu.com/">追梦人物的博客</a></div>-->
 {% endblock top %}
 
+
 {% block son %}<!-- 子模板预留块 -->{% endblock son %}
+
 
 {% endblock block %}
 <footer id="site-footer">
@@ -97,5 +99,5 @@
 <script src="{% static 'js/script.js' %}"></script>
 
 </body>
-{% endblock body %}
 </html>
+{% endblock body %}

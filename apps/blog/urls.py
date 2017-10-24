@@ -9,7 +9,8 @@ urlpatterns = [
     url(r'^comment/$', view=Comment),     # 用户评论
     url(r'^tags/(\d+)$', view=tags),      # 根据标签查询
     url(r'^classfiy/(\d+)', view=classfiy),   # 根据分类显示
+    url(r'^tidy/(?P<year>[\d+]{4})/(?P<month>[\d+]{1,2})', view=tidy),  # 根据归档显示
     url(r'\w+', view=not_found),              # 404页面
     url('(?P<pindex>\d*)|[/]', view=index),   # 显示博客首页
-    # url(r'^tidy/(?P<year>\d*)/(?P<month>\d*)', view=tidy),  # 根据归档显示
+
 ]

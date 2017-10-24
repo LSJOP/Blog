@@ -1,6 +1,8 @@
-{% extends 'base_right.html' %}
+{% extends 'base.html' %}
+{%load static from staticfiles%}
 {% block title %}博客{% endblock title %}
 {% block body_id %}<body id="single">{% endblock body_id %}
+    
 {% block son %}
 <div class="content-body">
     <div class="container">
@@ -12,7 +14,7 @@
                         <div class="entry-meta">
                             <span class="post-category"><a href="#">{{ article.classfiy }}</a></span>
                             <span class="post-date"><a href="#"><time class="entry-date"
-                                                                      datetime="2012-11-09T23:15:57+00:00">2017年5月11日</time></a></span>
+                                                                      datetime="2012-11-09T23:15:57+00:00">{{ article.create_time }}</time></a></span>
                             <span class="post-author"><a href="#">{{ article.author }}</a></span>
                             <span class="comments-link"><a href="#">{{ article.comment_num }} 评论</a></span>
                             <span class="views-count"><a href="#">{{ article.read_num }} 阅读</a></span>
@@ -21,11 +23,12 @@
                     <div class="entry-content clearfix">
                         {{ article.body|safe }}
                     </div>
+
                 </article>
                 <section class="comment-area" id="comment-area">
                     <hr>
                     <h3>发表评论</h3>
-                    <form action="/comment/" method="post" class="comment-form">
+                    <form action="#" method="post" class="comment-form">
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="id_name">名字：</label>
@@ -47,34 +50,83 @@
                         </div>    <!-- row -->
                     </form>
                     <div class="comment-list-panel">
-                        <h3>评论列表，共 <span>{{ comment.comment_num }}</span>{{ article.comment_num }} 条评论</h3>
+                        <h3>评论列表，共 <span>{{ comment.comment_num }}</span> 条评论</h3>
                         <ul class="comment-list list-unstyled">
+                            {% for comment_obj in comment_list %}
                             <li class="comment-item">
-                                {% for comment_obj in comment_list %}
                                 <span class="nickname">{{ comment_obj.name }}</span>
                                 <time class="submit-date" datetime="2012-11-09T23:15:57+00:00">{{ comment_obj.update_time }}</time>
                                 <div class="text">
-                                   {{ comment_obj.comment }}
+                                    {{ comment_obj.comment }}
                                 </div>
-                                {% endfor %}
                             </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </section>
             </main>
-            {% block sun %}
 
-            <!-- 博客页面 -->
-            {% block toc %}<!-- 给文章目录的预留块 -->
-            <div class="widget widget-content">
-                <h3 class="widget-title">文章目录</h3>
-                <a href="">{{ article.toc|safe }}</a>
-            </div>
-            {% endblock toc %}
+            <aside class="col-md-4">
+                <div class="widget widget-content">
+                    <h3 class="widget-title">文章目录</h3>
+                    <ul>
+                        <a href="">{{ article.toc|safe }}</a>
+                    </ul>
+                </div>
 
-            {% endblock sun %}
+
+                <div class="widget widget-recent-posts">
+                    <h3 class="widget-title">最新文章</h3>
+                    <ul>
+                        {% for article in New_Article_List %}
+                        <li>
+                            <a href="/blog/{{ article.id }}/">{{ article.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="widget widget-archives">
+                    <h3 class="widget-title">归档</h3>
+                    <ul>
+                        {% for date in date_list %}
+                        <li>
+                            <a href="/tidy/{{ date.year }}/{{ date.month }}/">{{ date.year }} 年 {{ date.month }} 月</a>
+                        </li>
+                        {% empty %}
+                        暂无归档！
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="widget widget-category">
+                    <h3 class="widget-title">分类</h3>
+                    <ul>
+                        {% for class in Classfiy_List %}
+                            <li>
+                                <a href="/classfiy/{{ class.id }}">{{ class.name }}<span class="post-count">({{ class.sum }})</span></a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="widget widget-tag-cloud">
+                    <h3 class="widget-title">标签云</h3>
+                    <ul>
+                        {% for tag in tags %}
+                        <li>
+                            <a href="/tags/{{ tag.id }}">{{ tag }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="rss">
+                    <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
+                </div>
+            </aside>
 
         </div>
     </div>
 </div>
+
 {% endblock son %}

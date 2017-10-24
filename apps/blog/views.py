@@ -14,7 +14,6 @@ def index(request, pindex):
     tags = Tag.objects.get_list_object()                              # 获取标签列表
     for article in Article_obj_list:
         article.comment_num = article.comment_set.count               # 增加评论数量属性
-    print('index')
     # 分页
     if pindex == '':
         pindex = 1
@@ -39,10 +38,12 @@ def index(request, pindex):
         # 其他情况,显示当前页的前两页和后两页,当前页
         pages = range(pindex - 2, pindex + 3)
     New_Article_List = Article.objects.get_article_list(sort='new')[:4]  # 获取到最新4篇文章列表
+    date_list = Article.objects.dates('create_time', 'month', order='DESC')  # 文章归档
     return render(request, 'blog/index.html', {'Article_obj_list': Article_obj_list,
                                                'Classfiy_List': classfiy_list,
                                                'tags': tags, 'pages': pages,
-                                               'New_Article_List': New_Article_List})
+                                               'New_Article_List': New_Article_List,
+                                               'date_list': date_list})
 
 
 def about(request):
@@ -60,16 +61,19 @@ def blog(request, article_id):
     New_Article_List = Article.objects.get_article_list(sort='new')  # 获取到最新的文章列表
     classfiy_list = Classfiy.objects.get_all_classfiy()  # 获取分类列表
     tags = Tag.objects.get_list_object()  # 获取标签列表
-
+    date_list = Article.objects.dates('create_time', 'month', order='DESC')  # 文章归档
     return render(request, 'blog/detail.html', context={'article': article, 'comment_list': comment_list,
                                                         'New_Article_List': New_Article_List,
                                                         'Classfiy_List': classfiy_list,
-                                                        'tags': tags})
+                                                        'tags': tags, 'date_list': date_list})
 
 
 def tidy(request, year, month):
     """根据归档查询显示"""
-    pass
+    article_list = Article.objects.get_article_list_by_month(year=year, month=month)
+    for article in article_list:
+        article.comment_num = article.comment_set.count  # 增加评论数量属性
+    return render(request, 'blog/temp.html', context={'article_list': article_list})
 
 
 def classfiy(request, classfiy_id):
@@ -77,7 +81,8 @@ def classfiy(request, classfiy_id):
     article_list = Article.objects.get_article_by_classfiy(classfiy_id=classfiy_id)  # 通过分类id获取到文章
     for article in article_list:
         article.comment_num = article.comment_set.count  # 增加评论数量属性
-    return render(request, 'blog/temp.html', context={'article_list': article_list})
+    title = Classfiy.objects.get_classfiy(classfiy_id=classfiy_id).name
+    return render(request, 'blog/temp.html', context={'article_list': article_list, 'title': title})
 
 
 def tags(request, tags_id):
@@ -85,7 +90,8 @@ def tags(request, tags_id):
     article_list = Article.objects.get_article_by_tags(tags_id=tags_id)  # 通过标签id获取到文章
     for article in article_list:
         article.comment_num = article.comment_set.count               # 增加评论数量属性
-    return render(request, 'blog/temp.html', context={'article_list': article_list})
+    title = Tag.objects.get_tags(tags_id=tags_id).name
+    return render(request, 'blog/temp.html', context={'article_list': article_list, 'title': title})
 
 
 def Contact(request):

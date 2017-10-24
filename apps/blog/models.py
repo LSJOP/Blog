@@ -12,7 +12,7 @@ from django.db.models import Sum
 class ClassfiyManager(BaseManager):
     """分类模型管理器类"""
 
-    def get_all_classfiy(self, ):
+    def get_all_classfiy(self):
         """获取所有文章分类"""
         classfiy_obj_list = self.all()
         if classfiy_obj_list.exists():
@@ -20,6 +20,14 @@ class ClassfiyManager(BaseManager):
                 # 给分类增加数量属性
                 classfiy_obj.sum = classfiy_obj.article_set.all().aggregate(Sum('classfiy_id'))['classfiy_id__sum']  # 拿到的是一个字典,name__sum是键
             return classfiy_obj_list
+        else:
+            return None
+
+    def get_classfiy(self, classfiy_id):
+        """获取到分类对象"""
+        classfiy_obj = self.get_object(id=classfiy_id)
+        if classfiy_obj.exists():
+            return classfiy_obj[0]
         else:
             return None
 
@@ -47,6 +55,14 @@ class TagManager(BaseManager):
         tag_obj_list = self.get_list_object()
         if tag_obj_list.exists():
             return tag_obj_list
+        else:
+            return None
+
+    def get_tags(self, tags_id):
+        """获取到分类对象"""
+        tag_obj = self.get_object(id=tags_id)
+        if tag_obj.exists():
+            return tag_obj[0]
         else:
             return None
 
@@ -94,7 +110,7 @@ class ArticleManager(BaseManager):
         md = markdown.Markdown(extensions=[
             'markdown.extensions.extra',
             'markdown.extensions.codehilite',  # 语法高亮拓展
-            TocExtension(slugify=slugify),  # 自动生成目录
+            TocExtension(slugify=slugify),     # 自动生成目录
         ])
         article.body = md.convert(article.body)  # 将文章渲染成html格式
         article.toc = md.toc  # 文章目录
@@ -109,7 +125,7 @@ class ArticleManager(BaseManager):
     def get_article_list_by_month(self, year, month):
         """根据月份获取文章集合"""
         article_list = self.get_article_list()  # 获取文章集合
-        article_list = article_list.filter(pub_date__year=year, pub_date__month=month)
+        article_list = article_list.filter(create_time__year=year, create_time__month=month)
         if article_list.exists():
             return article_list
         else:

@@ -3,7 +3,10 @@
 {% block title %}联系{% endblock title %}
 {% block body_id %}<body id="page">{% endblock body_id %}
 
+
+
 {% block son %}
+
 		<div class="content-body">
 			<div class="container">
 				<div class="row">
@@ -11,14 +14,15 @@
 						<h1 class="page-title">联系</h1>
 						<article class="post">
 							<div class="entry-content clearfix">
-								<form action="#" method="post" class="contact-form">
+								<form class="contact-form" method="post" action="/contatc_post/">
+									{% csrf_token %}
 									<div class="row">
 										<div class="col-md-6 col-md-offset-3">
-											<input type="text" name="name" placeholder="姓名" required>
-											<input type="email" name="email" placeholder="邮箱" required>
-											<input type="text" name="subject" placeholder="主题" required>
-											<textarea name="message" rows="7" placeholder="内容" required></textarea>
-											<button class="btn-send btn-5 btn-5b ion-ios-paperplane"><span>给我留言</span></button>
+											<input type="text"  name="name" placeholder="姓名" id="name" required>
+											<input type="email" name="email" placeholder="邮箱"  id="email" required>
+											<input type="text"  name="subject" placeholder="主题" id="subject" required>
+											<textarea name="message" rows="7" placeholder="内容" id="message" required></textarea>
+											<button class="btn-send btn-5 btn-5b ion-ios-paperplane" ><span>给我留言</span></button>
 										</div>
 									</div>	<!-- row -->
 								</form>
@@ -28,4 +32,7 @@
 				</div>
 			</div>
 		</div>
+
 {% endblock son %}
+
+

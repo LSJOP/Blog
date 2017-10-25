@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from django.http import response
-from .models import Article, Classfiy, Comment, Tag
+from django.shortcuts import render, redirect
+from django.http import response, JsonResponse, HttpResponseRedirect
+from .models import Article, Classfiy, Comment, Tag, Contatc
 from django.core.paginator import Paginator
 
 
@@ -37,7 +37,7 @@ def index(request, pindex):
     else:
         # 其他情况,显示当前页的前两页和后两页,当前页
         pages = range(pindex - 2, pindex + 3)
-    New_Article_List = Article.objects.get_article_list(sort='new')[:4]  # 获取到最新4篇文章列表
+    New_Article_List = Article.objects.get_article_list(sort='new')[:4]      # 获取到最新4篇文章列表
     date_list = Article.objects.dates('create_time', 'month', order='DESC')  # 文章归档
     return render(request, 'blog/index.html', {'Article_obj_list': Article_obj_list,
                                                'Classfiy_List': classfiy_list,
@@ -99,9 +99,26 @@ def Contact(request):
     return render(request, 'blog/contact.html')
 
 
-def comment(request):
+def comment(request, article_id):
     """接收用户评论"""
-    pass
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    url = request.POST.get('url')
+    comment = request.POST.get('comment')
+    addr = '中国大陆'
+    article_id = int(article_id)
+    Comment.objects.crate_comment_by_article(name=name, email=email, comment=comment, addr=addr, article_id=article_id)
+    return redirect('/')
+
+
+def contatc_post(request):
+    """接收联系数据"""
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    subject = request.POST.get('subject')
+    message = request.POST.get('message')
+    Contatc.objects.create_contatc(name=name, email=email, subject=subject, message=message)
+    return redirect('/')
 
 
 def not_found(request):

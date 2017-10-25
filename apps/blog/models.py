@@ -180,6 +180,11 @@ class CommentManager(BaseManager):
         else:
             return None
 
+    def crate_comment_by_article(self, comment, name, email, addr, article_id):
+        """根据文章id添加评论"""
+        self.create_one_object(comment=comment, name=name, email=email, addr=addr, article_id=article_id)
+        print('8888')
+
 
 class Comment(BaseModel):
     """评论模型类"""
@@ -199,4 +204,29 @@ class Comment(BaseModel):
         verbose_name_plural = verbose_name
         db_table = 'blog_comment'
 
+
+class ContatcManager(BaseManager):
+    """联系模型管理器类"""
+
+    def create_contatc(self, name, subject, email, message):
+        """保存联系"""
+        self.create_one_object(name=name, subject=subject, email=email, message=message)
+
+
+class Contatc(BaseModel):
+    """联系模型类"""
+    name = models.CharField(max_length=30, verbose_name='姓名')
+    subject = models.CharField(max_length=60, verbose_name='主题')
+    email = models.EmailField(max_length=20, verbose_name='邮箱')
+    message = models.TextField(verbose_name='内容')
+
+    objects = ContatcManager()
+
+    def __str__(self):
+        return self.Contatc
+
+    class Meta:
+        verbose_name = '联系'
+        verbose_name_plural = verbose_name
+        db_table = 'blog_Contatc'
 

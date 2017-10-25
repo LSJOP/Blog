@@ -1,5 +1,5 @@
 import xadmin
-from .models import Article, Tag, Classfiy, Comment
+from .models import Article, Tag, Classfiy, Comment, Contatc
 
 
 class ArticleAdmin(object):
@@ -22,9 +22,15 @@ class CommentAdmin(object):
     list_display = ['name', 'addr']
 
 
+class ContatcAdmin(object):
+    """联系模型管理类"""
+    list_display = ['name', 'email', 'subject']
+
 xadmin.site.register(Tag, TagAdmin)
 xadmin.site.register(Classfiy, ClassfiyAdmin)
 xadmin.site.register(Article, ArticleAdmin)
 xadmin.site.register(Comment, CommentAdmin)
+xadmin.site.register(Contatc, ContatcAdmin)
+
 
 

@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e879971d-97d5-46f2-b001-01f419e9ce38" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Blog/settings.py" afterPath="$PROJECT_DIR$/Blog/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/blog/adminx.py" afterPath="$PROJECT_DIR$/apps/blog/adminx.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/blog/models.py" afterPath="$PROJECT_DIR$/apps/blog/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/blog/urls.py" afterPath="$PROJECT_DIR$/apps/blog/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/blog/views.py" afterPath="$PROJECT_DIR$/apps/blog/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/base.html" afterPath="$PROJECT_DIR$/apps/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/blog/contact.html" afterPath="$PROJECT_DIR$/apps/templates/blog/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/blog/detail.html" afterPath="$PROJECT_DIR$/apps/templates/blog/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/blog/index.html" afterPath="$PROJECT_DIR$/apps/templates/blog/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,12 +51,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temp.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="temp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/templates/blog/temp.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Blog/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1008">
+              <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+              <folding>
+                <element signature="e#377#386#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,16 +139,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_manager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/blog/db/base_manager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -211,7 +205,6 @@
         <option value="$PROJECT_DIR$/apps/templates/base_right.html" />
         <option value="$PROJECT_DIR$/apps/templates/blog/about.html" />
         <option value="$PROJECT_DIR$/apps/templates/blog/temp.html" />
-        <option value="$PROJECT_DIR$/Blog/settings.py" />
         <option value="$PROJECT_DIR$/apps/blog/adminx.py" />
         <option value="$PROJECT_DIR$/apps/templates/blog/contact.html" />
         <option value="$PROJECT_DIR$/apps/blog/urls.py" />
@@ -220,6 +213,7 @@
         <option value="$PROJECT_DIR$/apps/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/apps/blog/views.py" />
         <option value="$PROJECT_DIR$/apps/templates/blog/index.html" />
+        <option value="$PROJECT_DIR$/Blog/settings.py" />
       </list>
     </option>
   </component>
@@ -1020,18 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding>
-            <element signature="e#377#386#0" expanded="true" />
-            <marker date="1508920079330" expanded="true" signature="2807:3130" ph="..." />
-            <marker date="1508920079330" expanded="true" signature="2824:3128" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/blog/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1159,6 +1141,16 @@
         <state relative-caret-position="72">
           <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+          <folding>
+            <element signature="e#377#386#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -20,5 +20,6 @@ import xadmin
 urlpatterns = (
     url(r'admin/', include(admin.site.urls)),
     url(r'xadmin', include(xadmin.site.urls)),
+    url(r'^search/', include('haystack.urls')),  # 全文检索
     url(r'', include('blog.urls')),  # 博客
 )

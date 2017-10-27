@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',   # 注册crispy_forms
     'reversion',
     'DjangoUeditor',  # 百度的html编辑器
+    'haystack',       # 注册全文检索
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -86,6 +87,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Blog.wsgi.application'
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        # 使用whoosh引擎
+        'ENGINE': "haystack.backends.whoosh_cn_backend.WhooshEngine",
+        # 索引文件路径
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    }
+}
+
+# 当添加,修改,删除数据时,自动生成索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 3  # 指定搜索结果页每页显示多少条信息
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -95,7 +109,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Blog',
         'USER': 'root',
-        
+        'PASSWORD': '809588434ALiYun',
+        'HOST': 'linsijiandemysql.mysql.rds.aliyuncs.com',
         'PORT': '3306',
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }

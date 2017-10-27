@@ -12,8 +12,6 @@ def index(request, pindex):
     Article_obj_list = Article.objects.get_article_list(sort='read')  # 获取文章列表
     classfiy_list = Classfiy.objects.get_all_classfiy()               # 获取分类列表
     tags = Tag.objects.get_list_object()                              # 获取标签列表
-    for article in Article_obj_list:
-        article.comment_num = article.comment_set.count               # 增加评论数量属性
     # 分页
     if pindex == '':
         pindex = 1
@@ -55,7 +53,6 @@ def blog(request, article_id):
     """博客页面"""
     article = Article.objects.get_one_article(article_id=article_id)  # 通过文章id获取到文章
     article = Article.objects.get_html(article)          # 获取渲染成html的文本
-    article.comment_num = article.comment_set.count      # 增加评论数量属性
     Article.objects.add_read_num(article_id=article_id)  # 增加文章的阅读量
     comment_list = Comment.objects.get_comment_list(article_id=article_id)     # 根据文章id获取文章所对应的评论
     New_Article_List = Article.objects.get_article_list(sort='new')  # 获取到最新的文章列表
@@ -71,16 +68,12 @@ def blog(request, article_id):
 def tidy(request, year, month):
     """根据归档查询显示"""
     article_list = Article.objects.get_article_list_by_month(year=year, month=month)
-    for article in article_list:
-        article.comment_num = article.comment_set.count  # 增加评论数量属性
     return render(request, 'blog/temp.html', context={'article_list': article_list})
 
 
 def classfiy(request, classfiy_id):
     """根据分类查询"""
     article_list = Article.objects.get_article_by_classfiy(classfiy_id=classfiy_id)  # 通过分类id获取到文章
-    for article in article_list:
-        article.comment_num = article.comment_set.count  # 增加评论数量属性
     title = Classfiy.objects.get_classfiy(classfiy_id=classfiy_id).name
     return render(request, 'blog/temp.html', context={'article_list': article_list, 'title': title})
 
@@ -88,8 +81,6 @@ def classfiy(request, classfiy_id):
 def tags(request, tags_id):
     """根据标签查询"""
     article_list = Article.objects.get_article_by_tags(tags_id=tags_id)  # 通过标签id获取到文章
-    for article in article_list:
-        article.comment_num = article.comment_set.count               # 增加评论数量属性
     title = Tag.objects.get_tags(tags_id=tags_id).name
     return render(request, 'blog/temp.html', context={'article_list': article_list, 'title': title})
 

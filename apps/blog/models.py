@@ -89,7 +89,9 @@ class ArticleManager(BaseManager):
         """获取一篇文章"""
         article_obj = self.get_object(id=article_id)
         if article_obj.exists():
-            return article_obj[0]
+            article_obj = article_obj[0]
+            article_obj.comment_num = article_obj.comment_set.count  # 增加评论数量属性
+            return article_obj
         else:
             return None
 
@@ -101,6 +103,8 @@ class ArticleManager(BaseManager):
             sort = ('update_time',)       # 根据文章更新时间进行排序
         article_list = self.get_list_object(filters={}, order_by=sort)
         if article_list.exists():
+            for article_obj in article_list:
+                article_obj.comment_num = article_obj.comment_set.count  # 增加评论数量属性
             return article_list
         else:
             return None
@@ -127,6 +131,8 @@ class ArticleManager(BaseManager):
         article_list = self.get_article_list()  # 获取文章集合
         article_list = article_list.filter(create_time__year=year, create_time__month=month)
         if article_list.exists():
+            for article_obj in article_list:
+                article_obj.comment_num = article_obj.comment_set.count  # 增加评论数量属性
             return article_list
         else:
             return None
@@ -135,6 +141,8 @@ class ArticleManager(BaseManager):
         """根据标签id或分类id获取文章"""
         article_obj_list = self.get_list_object(filters={'tags': tags_id})
         if article_obj_list.exists():
+            for article_obj in article_obj_list:
+                article_obj.comment_num = article_obj.comment_set.count  # 增加评论数量属性
             return article_obj_list
         else:
             return None
@@ -143,6 +151,8 @@ class ArticleManager(BaseManager):
         """根据标签获取文章"""
         article_obj_list = self.get_list_object(filters={'classfiy': classfiy_id})
         if article_obj_list.exists():
+            for article_obj in article_obj_list:
+                article_obj.comment_num = article_obj.comment_set.count  # 增加评论数量属性
             return article_obj_list
         else:
             return None
@@ -183,7 +193,6 @@ class CommentManager(BaseManager):
     def crate_comment_by_article(self, comment, name, email, addr, article_id):
         """根据文章id添加评论"""
         self.create_one_object(comment=comment, name=name, email=email, addr=addr, article_id=article_id)
-        print('8888')
 
 
 class Comment(BaseModel):

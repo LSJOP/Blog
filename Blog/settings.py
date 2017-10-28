@@ -108,9 +108,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Blog',
-        'USER': 'root',
-        'PASSWORD': '809588434ALiYun',
-        'HOST': 'linsijiandemysql.mysql.rds.aliyuncs.com',
         'PORT': '3306',
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }

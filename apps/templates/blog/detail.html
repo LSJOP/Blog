@@ -2,7 +2,9 @@
 {%load static from staticfiles%}
 {% block title %}博客{% endblock title %}
 {% block body_id %}<body id="single">{% endblock body_id %}
-    
+{% block link %}
+<link rel="stylesheet" href="{% static 'ALiIcon/iconfont.css' %}">
+{% endblock link %}
 {% block son %}
 <div class="content-body">
     <div class="container">
@@ -26,6 +28,9 @@
                 </article>
                 <section class="comment-area" id="comment-area">
                     <hr>
+                      <ul class="social">
+						<li class="twitter"><a href="{% url 'social:begin' 'weibo' %}" target="_blank"><span class="iconfont icon-weibo"></span></a></li>
+                      </ul>
                     <h3>发表评论</h3>
                     <form action="/comment/{{ article.id }}/" method="post" class="comment-form" >
                         {% csrf_token %}

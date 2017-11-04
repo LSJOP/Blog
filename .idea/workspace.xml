@@ -2,23 +2,310 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e879971d-97d5-46f2-b001-01f419e9ce38" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/iconfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/iconfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/demo_fontclass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/demo_symbol.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/demo_unicode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/iconfont.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/static/ALiIcon/iconfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Blog.iml" afterPath="$PROJECT_DIR$/.idea/Blog.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/actions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/amazon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/angel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/aol.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/appsfuel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/arcgis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/asana.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/azuread.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/azuread_tenant.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/battlenet.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/beats.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/behance.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/belgiumeid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/bitbucket.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/bungie.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/changetip.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/classlink.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/clef.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/coding.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/coinbase.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/coursera.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/dailymotion.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/deezer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/digitalocean.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/disqus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/docker.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/douban.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/dribbble.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/drip.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/dropbox.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/echosign.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/edmodo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/email.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/eventbrite.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/eveonline.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/evernote.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/exacttarget.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/facebook.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/fedora.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/fitbit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/five_hundred_px.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/flickr.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/foursquare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/gae.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/github.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/github_enterprise.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/gitlab.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/goclio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/goclioeu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/google.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/google_openidconnect.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/instagram.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/itembase.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/jawbone.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/justgiving.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/kakao.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/khanacademy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/lastfm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/launchpad.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/legacy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/line.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/linkedin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/live.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/livejournal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/loginradius.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/lyft.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/mailchimp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/mailru.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/mapmyfitness.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/mediawiki.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/meetup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/mendeley.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/microsoft.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/mineid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/mixcloud.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/monzo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/moves.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/nationbuilder.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/naver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/ngpvan.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/nk.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/oauth.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/odnoklassniki.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/open_id.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/open_id_connect.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/openshift.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/openstreetmap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/orbi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/orcid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/patreon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/persona.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/pinterest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/pixelpin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/pocket.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/podio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/professionali.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/pushbullet.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/qiita.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/qq.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/quizlet.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/rdio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/readability.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/reddit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/runkeeper.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/salesforce.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/saml.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/shimmering.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/shopify.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/sketchfab.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/skyrock.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/slack.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/soundcloud.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/spotify.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/stackoverflow.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/steam.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/stocktwits.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/strava.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/stripe.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/suse.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/taobao.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/thisismyjam.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/trello.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/tripit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/tumblr.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/twilio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/twitch.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/twitter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/uber.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/ubuntu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/udata.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/untappd.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/upwork.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/username.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/vend.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/vimeo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/vk.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/weibo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/weixin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/withings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/wunderlist.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/xing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/yahoo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/yammer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/yandex.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/backends/zotero.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/exceptions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/debug.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/disconnect.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/mail.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/partial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/social_auth.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/user.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/pipeline/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/storage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/store.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/strategy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/actions/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/actions/actions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/actions/test_associate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/actions/test_disconnect.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/actions/test_login.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/data/saml_response.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/legacy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/oauth.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/open_id.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/open_id_connect.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_amazon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_angel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_arcgis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_asana.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_azuread.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_behance.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_bitbucket.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_broken.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_clef.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_coinbase.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_coursera.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_dailymotion.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_deezer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_digitalocean.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_disqus.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_dribbble.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_drip.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_dropbox.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_dummy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_edmodo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_email.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_evernote.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_facebook.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_fitbit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_five_hundred_px.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_flickr.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_foursquare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_github.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_github_enterprise.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_gitlab.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_google.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_instagram.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_itembase.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_kakao.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_khanacademy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_linkedin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_live.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_livejournal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_lyft.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_mapmyfitness.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_mineid.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_mixcloud.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_nationbuilder.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_naver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_ngpvan.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_orbi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_patreon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_pinterest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_podio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_qiita.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_quizlet.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_readability.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_reddit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_saml.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_sketchfab.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_skyrock.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_slack.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_soundcloud.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_spotify.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_stackoverflow.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_steam.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_stocktwits.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_strava.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_stripe.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_taobao.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_thisismyjam.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_tripit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_tumblr.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_twitch.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_twitter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_uber.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_udata.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_upwork.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_username.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_vk.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_wunderlist.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_xing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_yahoo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_yammer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_yandex.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/backends/test_zotero.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/pipeline.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/requirements-base.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/requirements-pypy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/requirements-python2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/requirements-python3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/requirements.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/strategy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/test_exceptions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/test_pipeline.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/test_storage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/tests/testkey.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_core/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/compat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/context_processors.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/fields.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/managers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/middleware.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0002_add_related_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0003_alter_email_max_length.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0004_auto_20160423_0400.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0005_auto_20160727_2333.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0006_partial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0007_code_timestamp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/0008_partial_timestamp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/storage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/strategy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra_apps/social_django/views.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/blog/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/blog/migrations/0002_auto_20171025_1818.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/extra_apps/xadmin/migrations/0004_auto_20171103_1032.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Blog/settings.py" afterPath="$PROJECT_DIR$/Blog/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Blog/urls.py" afterPath="$PROJECT_DIR$/Blog/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/base.html" afterPath="$PROJECT_DIR$/apps/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/blog/about.html" afterPath="$PROJECT_DIR$/apps/templates/blog/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/blog/urls.py" afterPath="$PROJECT_DIR$/apps/blog/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/static/css/rewrite.css" afterPath="$PROJECT_DIR$/apps/static/css/rewrite.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/blog/detail.html" afterPath="$PROJECT_DIR$/apps/templates/blog/detail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,33 +324,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blog/settings.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/blog/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+            <state relative-caret-position="504">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
-                <element signature="e#377#386#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog/urls.py">
+      <file leaf-file-name="rewrite.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/static/css/rewrite.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-648">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,58 +349,70 @@
       <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/templates/blog/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="24" column="113" lean-forward="false" selection-start-line="24" selection-start-column="113" selection-end-line="24" selection-end-column="113" />
+            <state relative-caret-position="792">
+              <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/static/ALiIcon/demo.css">
+      <file leaf-file-name="search_indexes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/blog/search_indexes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="432">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iconfont.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/static/ALiIcon/iconfont.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="query.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/query.py">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/templates/blog/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/__init__.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/extra_apps/social_django/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+              <folding>
+                <element signature="e#18#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/blog/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/blog/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-712">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -154,9 +443,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/extra_apps/xadmin/sites.py" />
-        <option value="$PROJECT_DIR$/extra_apps/xadmin/adminx.py" />
-        <option value="$PROJECT_DIR$/extra_apps/xadmin/views/dashboard.py" />
         <option value="$PROJECT_DIR$/extra_apps/xadmin/views/base.py" />
         <option value="$PROJECT_DIR$/extra_apps/xadmin/views/delete.py" />
         <option value="$PROJECT_DIR$/extra_apps/xadmin/views/detail.py" />
@@ -185,7 +471,6 @@
         <option value="$PROJECT_DIR$/apps/templates/base_right.html" />
         <option value="$PROJECT_DIR$/apps/blog/adminx.py" />
         <option value="$PROJECT_DIR$/apps/templates/blog/contact.html" />
-        <option value="$PROJECT_DIR$/apps/blog/urls.py" />
         <option value="$PROJECT_DIR$/apps/templates/search/indexs/blog/Article.txt" />
         <option value="$PROJECT_DIR$/apps/blog/search_index.py" />
         <option value="$PROJECT_DIR$/apps/templates/search/indexs/blog/article.txt" />
@@ -194,17 +479,21 @@
         <option value="$PROJECT_DIR$/apps/blog/models.py" />
         <option value="$PROJECT_DIR$/apps/templates/search/search.html" />
         <option value="$PROJECT_DIR$/apps/templates/blog/temp.html" />
-        <option value="$PROJECT_DIR$/apps/templates/blog/index.html" />
-        <option value="$PROJECT_DIR$/apps/templates/blog/detail.html" />
         <option value="$USER_HOME$/.virtualenvs/lsjop/lib/python3.5/site-packages/haystack/forms.py" />
         <option value="$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/__init__.py" />
         <option value="$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/query.py" />
         <option value="$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/forms.py" />
-        <option value="$PROJECT_DIR$/Blog/urls.py" />
         <option value="$PROJECT_DIR$/apps/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/static/ALiIcon/iconfont.css" />
         <option value="$PROJECT_DIR$/apps/templates/blog/about.html" />
+        <option value="$PROJECT_DIR$/apps/templates/blog/index.html" />
         <option value="$PROJECT_DIR$/Blog/settings.py" />
+        <option value="$PROJECT_DIR$/apps/templates/blog/detail.html" />
+        <option value="$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/social_django/urls.py" />
+        <option value="$PROJECT_DIR$/apps/blog/urls.py" />
+        <option value="$PROJECT_DIR$/Blog/urls.py" />
+        <option value="$PROJECT_DIR$/apps/static/css/rewrite.css" />
+        <option value="$PROJECT_DIR$/extra_apps/social_django/urls.py" />
       </list>
     </option>
   </component>
@@ -217,8 +506,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="114" />
     <option name="y" value="42" />
-    <option name="width" value="2618" />
-    <option name="height" value="1483" />
+    <option name="width" value="2622" />
+    <option name="height" value="1782" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -235,6 +524,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,199 +533,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.2 virtualenv at ~/.virtualenvs/LSJOP &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.2 virtualenv at ~/.virtualenvs/LSJOP &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 3.5.2 virtualenv at ~/.virtualenvs/LSJOP &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="haystack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ALiIcon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Blog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.virtualenvs/LSJOP/bin/python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/static/ALiIcon" />
-      <recent name="$PROJECT_DIR$/apps/static" />
-      <recent name="$PROJECT_DIR$/apps/static/img" />
-      <recent name="$PROJECT_DIR$/apps/templates/search" />
-      <recent name="$PROJECT_DIR$/apps/templates/blog" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/templates" />
       <recent name="$PROJECT_DIR$/apps/404 and 500" />
       <recent name="$PROJECT_DIR$/apps/static" />
       <recent name="$PROJECT_DIR$/apps/static/css" />
       <recent name="$PROJECT_DIR$/apps/blog" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/extra_apps" />
+      <recent name="$PROJECT_DIR$/apps/static/ALiIcon" />
+      <recent name="$PROJECT_DIR$/apps/static" />
+      <recent name="$PROJECT_DIR$/apps/static/img" />
+      <recent name="$PROJECT_DIR$/apps/templates/search" />
     </key>
   </component>
   <component name="RunManager" selected="Python.manage">
@@ -714,28 +841,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="114" y="42" width="2618" height="1483" extended-state="6" />
-    <editor active="true" />
+    <frame x="114" y="42" width="2622" height="1782" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13407181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13386728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32989064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293201" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293623" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -751,72 +878,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/blog/middleware.py" />
-    <entry file="file://$PROJECT_DIR$/apps/templates/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/static/404/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/middleware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/error/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/error/500.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/migrations/0002_auto_20171021_2104.py" />
-    <entry file="file://$PROJECT_DIR$/apps/blog/migrations/0002_auto_20171021_2124.py" />
-    <entry file="file://$PROJECT_DIR$/apps/blog/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/db/base_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/static/css/highlights/fruity.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/static/css/highlights/github.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/plugins/chart.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -839,32 +900,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/templates/base_right.html" />
-    <entry file="file://$PROJECT_DIR$/apps/blog/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/blog/migrations/0002_auto_20171025_1644.py" />
     <entry file="file://$PROJECT_DIR$/apps/blog/db/base_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -882,38 +922,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/search_indexes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="170" column="30" lean-forward="true" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -924,37 +936,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/blog/temp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="17" column="97" lean-forward="false" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/blog/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="15" column="88" lean-forward="false" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/static/img/me.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/blog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/blog/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/static/feng.svg" />
@@ -976,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,9 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#101#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1002,9 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#101#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,14 +988,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/query.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1027,16 +1002,7 @@
     <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/haystack/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1044,15 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1068,24 +1024,222 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/migrations/0004_auto_20171103_1032.py" />
+    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/migrations/0004_auto_20171104_1038.py" />
+    <entry file="file://$PROJECT_DIR$/apps/templates/blog/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/templates/blog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/templates/blog/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="17" column="97" lean-forward="false" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/social_core/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/social_django/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/conf/urls/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/social_core/tests/actions/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/social_core/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/social_core/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/LSJOP/lib/python3.5/site-packages/social_django/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1152">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#377#386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#654#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/search_indexes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/static/css/rewrite.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-712">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/templates/blog/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="24" column="113" lean-forward="false" selection-start-line="24" selection-start-column="113" selection-end-line="24" selection-end-column="113" />
+        <state relative-caret-position="792">
+          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
+    <entry file="file://$PROJECT_DIR$/apps/templates/blog/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+        <state relative-caret-position="324">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/social_django/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
-            <element signature="e#377#386#0" expanded="true" />
+            <element signature="e#18#50#0" expanded="true" />
           </folding>
         </state>
       </provider>

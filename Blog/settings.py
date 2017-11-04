@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'reversion',
     'DjangoUeditor',  # 百度的html编辑器
     # 'haystack',       # 注册全文检索
+    'social_django',  # 第三登录
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -80,6 +81,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -110,11 +113,26 @@ DATABASES = {
         'NAME': 'Blog',
         'PORT': '3306',
         'USER': 'root',
-        
+        'PASSWORD': '809588434',
+        'HOST': 'localhost',
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         }
     }
 }
+
+
+AUTHENTICATION_BACKENDS = (
+    "social_core.backends.weibo.WeiboOAuth2",
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+# 配置第三方登录的App Secret和key
+SOCIAL_AUTH_WEIBO_KEY = '3313597197'
+SOCIAL_AUTH_WEIBO_SECRET = '344ce25907c473a43928dbb7b1fa8c27'
+
+# 用户登录成功后进行跳转
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
 
 
 # Internationalization

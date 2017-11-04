@@ -14,12 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from django.contrib import admin
 import xadmin
 
 urlpatterns = (
-    # url(r'admin/', include(admin.site.urls)),
-    url(r'xadmin', include(xadmin.site.urls)),
+    url(r'^xadmin', include(xadmin.site.urls)),
     # url(r'^search/', include('haystack.urls')),  # 全文检索
+    url(r'^login', include('social_django.urls', namespace='social')),  # 第三方登录
     url(r'', include('blog.urls')),  # 博客
 )

@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',   # 注册crispy_forms
     'reversion',
     'DjangoUeditor',  # 百度的html编辑器
-    'haystack',       # 注册全文检索
+    # 'haystack',       # 注册全文检索
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -109,6 +109,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Blog',
         'PORT': '3306',
+        'USER': 'root',
+        
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         }
     }

@@ -2,6 +2,9 @@
 {%load static from staticfiles%}
 {% block title %}关于{% endblock title %}
 {% block body_id %}<body id="page">{% endblock body_id %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'ALiIcon/iconfont.css' %}">
+{% endblock link %}
 {% block son %}
 <div class="content-body">
 		<div class="container">
@@ -18,10 +21,10 @@
 							<div class="height-40px"></div>
 							<h2 class="title text-center">Social</h2>
 							<ul class="social">
-								<li class="facebook"><a href="#"><span class="ion-social-facebook"></span></a></li>
-								<li class="twitter"><a href="#"><span class="ion-social-twitter"></span></a></li>
-								<li class="google-plus"><a href="#"><span class="ion-social-googleplus"></span></a></li>
-								<li class="tumblr"><a href="#"><span class="ion-social-tumblr"></span></a></li>
+								<li class="twitter"><a href="https://weibo.com/p/1005055138284214/home?from=page_100505&mod=TAB#place" target="_blank"><span class="iconfont icon-weibo"></span></a></li>
+								<li class="twitter"><a href="http://aibeta.oss-cn-beijing.aliyuncs.com/img/QQ.jpg" target="_blank"><span class="iconfont icon-QQ" ></span></a></li>
+								<li class="twitter"><a href="http://aibeta.oss-cn-beijing.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1.jpg" target="_blank"><span class="iconfont icon-wechat"></span></a></li>
+								<li class="twitter"><a href="https://github.com/LSJOP/Blog" target="_blank"><span class="iconfont ion-social-github"></span></a></li>
 							</ul>
 						</div>
 					</article>

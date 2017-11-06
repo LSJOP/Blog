@@ -59,7 +59,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     "utils.middleware.UrlPathRecordMiddleware",  # 记录用户ip地址中间件
-    "utils.middleware.ExceptionMiddleware",
+    # "utils.middleware.ExceptionMiddleware",
 )
 
 ROOT_URLCONF = 'Blog.urls'
@@ -121,6 +121,7 @@ DATABASES = {
 }
 
 
+# 指定认证后端
 AUTHENTICATION_BACKENDS = (
     "social_core.backends.weibo.WeiboOAuth2",
     'django.contrib.auth.backends.ModelBackend',
@@ -133,6 +134,8 @@ SOCIAL_AUTH_WEIBO_SECRET = '344ce25907c473a43928dbb7b1fa8c27'
 # 用户登录成功后进行跳转
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
 
+# 使用用户名来创建实例
+SOCIAL_AUTH_WEIBO_DOMAIN_AS_USERNAME = True
 
 
 # Internationalization

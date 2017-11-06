@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 import xadmin
+xadmin.autodiscover()
+# version模块自动注册需要版本控制的 Model
+from xadmin.plugins import xversion
+xversion.register_models()
 
 urlpatterns = (
     url(r'^xadmin', include(xadmin.site.urls)),
     # url(r'^search/', include('haystack.urls')),  # 全文检索
-    url(r'^login', include('social_django.urls', namespace='social')),  # 第三方登录
+    url(r'^login/', include('social_django.urls', namespace='social')),  # 第三方登录
     url(r'', include('blog.urls')),  # 博客
 )

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'DjangoUeditor',  # 百度的html编辑器
     # 'haystack',       # 注册全文检索
     'social_django',  # 第三登录
+    'login',  # 登录
 ]
 
 MIDDLEWARE_CLASSES = (

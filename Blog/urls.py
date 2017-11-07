@@ -23,6 +23,7 @@ xversion.register_models()
 urlpatterns = (
     url(r'^xadmin', include(xadmin.site.urls)),
     # url(r'^search/', include('haystack.urls')),  # 全文检索
+    url(r'^Login/', include('login.urls')),  # 登录
     url(r'^login/', include('social_django.urls', namespace='social')),  # 第三方登录
     url(r'', include('blog.urls')),  # 博客
 )

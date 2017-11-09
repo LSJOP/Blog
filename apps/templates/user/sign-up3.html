@@ -1,33 +1,34 @@
 {% extends 'base_sign_up.html' %}
 {%load static from staticfiles%}
-{% block block %}	
-	<body class="style-2">
+{% block block %}
+	<body class="style-3">
+
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul class="menu">
-						<li><a href="index.html">Style 1</a></li>
-						<li class="active"><a href="index2.html">Style 2</a></li>
-						<li><a href="index3.html">Style 3</a></li>
+						<li><a href="/user/sign-up/">Style 1</a></li>
+						<li class="active"><a href="/user/sign-up/2">Style 2</a></li>
+						<li><a href="#">Style 3</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 col-md-push-8">
 					
 
 					<!-- Start Sign In Form -->
-					<form action="#" class="fh5co-form animate-box" data-animate-effect="fadeInLeft">
+					<form action="#" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
 						<h2>注册</h2>
 						<div class="form-group">
 							<div class="alert alert-success" role="alert">请输入你的信息</div>
 						</div>
 						<div class="form-group">
-							<label for="name" class="sr-only">Name</label>
+							<label for="name" class="sr-only">用户名</label>
 							<input type="text" class="form-control" id="name" placeholder="用户名" autocomplete="off">
 						</div>
 						<div class="form-group">
-							<label for="email" class="sr-only">Email</label>
+							<label for="email" class="sr-only">邮箱</label>
 							<input type="email" class="form-control" id="email" placeholder="邮箱" autocomplete="off">
 						</div>
 						<div class="form-group">
@@ -36,13 +37,13 @@
 						</div>
 						<div class="form-group">
 							<label for="re-password" class="sr-only">Re-type Password</label>
-							<input type="password" class="form-control" id="re-password" placeholder="请再次输入密码" autocomplete="off">
+							<input type="password" class="form-control" id="re-password" placeholder="再次输入密码" autocomplete="off">
 						</div>
 						<div class="form-group">
 							<label for="remember"><input type="checkbox" id="remember">记住</label>
 						</div>
 						<div class="form-group">
-							<p>已经注册? <a href="/Login/index/2">登录</a></p>
+							<p>已经注册? <a href="/user/index/3">登录</a></p>
 						</div>
 						<div class="form-group">
 							<input type="submit" value="注册" class="btn btn-primary">

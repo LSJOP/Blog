@@ -2,11 +2,12 @@ from django.shortcuts import render, redirect
 from django.http import response, JsonResponse, HttpResponseRedirect
 from .models import Article, Classfiy, Comment, Tag, Contatc
 from django.core.paginator import Paginator
-
+from django.views.decorators.cache import cache_page  # 导入缓存装饰器
 
 # Create your views here.
 
 
+# @cache_page(60 * 15)  # 缓存15分钟
 def index(request, pindex):
     """显示首页视图"""
     Article_obj_list = Article.objects.get_article_list(sort='read')  # 获取文章列表
@@ -44,11 +45,13 @@ def index(request, pindex):
                                                'date_list': date_list})
 
 
+# @cache_page(60 * 15)  # 缓存15分钟
 def about(request):
     """关于页面"""
     return render(request, 'blog/about.html')
 
 
+# @cache_page(60 * 15)  # 缓存15分钟
 def blog(request, article_id):
     """博客页面"""
     article = Article.objects.get_one_article(article_id=article_id)  # 通过文章id获取到文章
@@ -85,21 +88,10 @@ def tags(request, tags_id):
     return render(request, 'blog/temp.html', context={'article_list': article_list, 'title': title})
 
 
+@cache_page(60 * 15)  # 缓存15分钟
 def Contact(request):
     """联系页面"""
     return render(request, 'blog/contact.html')
-
-
-def comment(request, article_id):
-    """接收用户评论"""
-    name = request.POST.get('name')
-    email = request.POST.get('email')
-    url = request.POST.get('url')
-    comment = request.POST.get('comment')
-    addr = '中国大陆'
-    article_id = int(article_id)
-    Comment.objects.crate_comment_by_article(name=name, email=email, comment=comment, addr=addr, article_id=article_id)
-    return redirect('/')
 
 
 def contatc_post(request):

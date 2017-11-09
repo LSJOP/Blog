@@ -15,7 +15,7 @@ import os
 import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, BASE_DIR)
-sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+# sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 
@@ -30,7 +30,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,14 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',           # 注册博客应用
     'xadmin',         # 注册xadmin
     'crispy_forms',   # 注册crispy_forms
     'reversion',
     'DjangoUeditor',  # 百度的html编辑器
-    # 'haystack',       # 注册全文检索
+    # 'haystack',     # 注册全文检索
     'social_django',  # 第三登录
-    'login',  # 登录
+    'apps.blog',           # 注册博客应用
+    'apps.user',           # 用户模块
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -116,8 +115,8 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '809588434',
         'HOST': 'localhost',
-        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
+        # 'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        # }
     }
 }
 
@@ -153,3 +152,17 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 配置celery
+import djcelery
+djcelery.setup_loader()
+BROKER_URL = 'redis://127.0.0.1:6379/2'
+
+
+# 发送邮件配置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = '17610898052@163.com'  # 发送邮件的邮箱
+EMAIL_HOST_PASSWORD = 'linsijian233'  # 在邮箱中设置的客户端授权密码
+EMAIL_FROM = '起風了<17610898052@163.com>'  # 收件人看到的发件人

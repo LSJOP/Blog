@@ -1,11 +1,13 @@
-from .db.base_manager import BaseManager
-from .db.base_model import BaseModel
-from django.db import models
-from django.contrib.auth.models import User
+from apps.db.base_manager import BaseManager
+from apps.db.base_model import BaseModel
 import markdown
+from django.contrib.auth.models import User
+from django.db import models
+from django.db.models import Sum
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
-from django.db.models import Sum
+
+
 # Create your models here.
 
 

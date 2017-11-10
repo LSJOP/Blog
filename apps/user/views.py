@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from apps.blog.models import Comment
-from utils.middleware import login_required  # 判断登录装饰器
+from utils.decorators import login_required  # 判断登录装饰器
 from .models import Passport
 from .task import send_register_success_mail  # 导入发送邮件任务函数
 from django.http import response, JsonResponse, HttpResponseRedirect
@@ -22,25 +22,10 @@ def forgot(request, num):
     return render(request, 'user/forgot{}.html'.format(num))
 
 
-def sign_up(request, num):
-    """注册视图函数"""
-    if request.method == 'GET':
-        """显示注册页面"""
-        return render(request, 'user/sign-up{}.html'.format(num))
-    else:
-        """处理用户注册信息"""
-        username = request.POST.get('user_name')  # 获取用户名
-        password = request.POST.get('pwd')  # 获取密码
-        email = request.POST.get('email')  # 获取邮箱
-        Passport.objects.add_one_passport(username, password, email)  # 将注册信息保存进数据库
-        send_register_success_mail(username=username, password=password, email=email)  # 发送注册成功邮件
-        return render(request, 'user/sign-up{}.html'.format(num))
-
-
 def login_check(request):
     """用户登录验证"""
     username = request.POST.get('username')
-    password = request.POST.get('pwd')
+    password = request.POST.get('password')
     remember = request.POST.get('remember')
     # 获取对象集合
     passport = Passport.objects.get_one_passport(username=username, password=password)
@@ -74,24 +59,23 @@ def logout(request):
     return redirect('/')
 
 
-def register(request):
+def register(request, num):
     """用户注册函数"""
     if request.method == 'GET':
         """显示注册页面"""
         return render(request, 'user/sign-up{}.html'.format(num))
     else:
         """处理用户注册信息"""
-        username = request.POST.get('user_name')  # 获取用户名
-        password = request.POST.get('pwd')  # 获取密码
+        username = request.POST.get('name')  # 获取用户名
+        password = request.POST.get('password')  # 获取密码
         email = request.POST.get('email')   # 获取邮箱
         Passport.objects.add_one_passport(username, password, email)  # 将注册信息保存进数据库
-        send_register_success_mail(username=username, password=password, email=email)  # 发送注册成功邮件
+        # send_register_success_mail(username=username, password=password, email=email)  # 发送注册成功邮件
         return redirect('/user/index/')  # 跳转至登录页面
 
 
 def check_user_exist(request):
     """用户名验证"""
-    """验证用户名是否存在"""
     username = request.POST.get('username')
     if Passport.objects.get_one_passport(username=username).exists():
         res = 1

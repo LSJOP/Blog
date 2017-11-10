@@ -1,3 +1,9 @@
 .pagination {
     margin: 20px 325px;
 }
+
+/* 登录页面提示信息 */
+.user_error,.pwd_error{color:#f00;display:none}
+
+/* 注册页面提示信息 */
+.error_tip{float:left;height:30px;line-height:30px;margin-left:70px;color:#e62e2e;display:none;}

@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
+<head>
 {%load static from staticfiles%}
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+	<link rel="stylesheet" href="{% static 'css/rewrite.css' %}">
 
 	<!-- Modernizr JS -->
 	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
@@ -41,13 +41,6 @@
 	<script src="{% static 'js/respond.min.js' %}"></script>
 	<![endif]-->
 
-{% block block %}
-<!-- 给注册子模版的预留块 -->
-{% endblock block %}
-<div class="row" style="padding-top: 60px; clear: both;">
-	<div class="col-md-12 text-center"><p><small>&copy 2017 -- 起風了 <a href="http://www.beian.gov.cn/" target="_blank"><img src="{% static 'img/ghs.png' %}"></a> <a href="http://www.beian.gov.cn/" target="_blank">粤ICP备17135476号</a></small></p></div>
-</div>
-</div>
 	<!-- jQuery -->
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<!-- Bootstrap -->
@@ -58,6 +51,19 @@
 	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
 	<!-- Main JS -->
 	<script src="{% static 'js/main.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'js/sha1.js'%}"></script> <!-- sha1加密 -->
+	<script type="text/javascript" src="{% static 'js/register.js' %}"></script>
+
+</head>
+{% block block %}
+<!-- 给注册子模版的预留块 -->
+{% endblock block %}
+<div class="row" style="padding-top: 60px; clear: both;">
+	<div class="col-md-12 text-center"><p><small>&copy 2017 -- 起風了 <a href="http://www.beian.gov.cn/" target="_blank"><img src="{% static 'img/ghs.png' %}"></a> <a href="http://www.beian.gov.cn/" target="_blank">粤ICP备17135476号</a></small></p></div>
+</div>
+</div>
+
 
 
 	</body>

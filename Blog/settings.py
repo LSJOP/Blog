@@ -58,7 +58,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    "utils.middleware.UrlPathRecordMiddleware",  # 记录用户ip地址中间件
+    "utils.middleware.UrlPathRecordMiddleware",  # 注册记录用户访问地址中间件类
     # "utils.middleware.ExceptionMiddleware",
 )
 

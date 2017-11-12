@@ -25,6 +25,6 @@ urlpatterns = (
     url(r'^xadmin', include(xadmin.site.urls)),
     # url(r'^search/', include('haystack.urls')),  # 全文检索
     url(r'^login/', include('social_django.urls', namespace='social')),  # 第三方登录
-    url(r'^user/', include('apps.user.urls')), # 用户模块
+    url(r'^user/', include('apps.user.urls')),  # 用户模块
     url(r'', include('apps.blog.urls')),  # 博客模块
 )

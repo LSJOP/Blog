@@ -9,5 +9,5 @@ def login_required(view_func):
             return view_func(request, *view_args, **view_kwargs)
         else:
             # 未登录
-            return redirect('/user/login/')
+            return redirect('/user/index/')
     return wrapper

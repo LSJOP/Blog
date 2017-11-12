@@ -51,7 +51,12 @@
                             <li class="cl-effect-11"><a href="/blog/1/" data-hover="博客">博客</a></li>
                             <li class="cl-effect-11"><a href="/about/" data-hover="关于">关于</a></li>
                             <li class="cl-effect-11"><a href="/contact/" data-hover="联系">联系</a></li>
-                            <li class="twitter"><a href="/user/index/" target="_blank"><span class="iconfont icon-denglu1"></span></a></li>
+                            {% if request.session.islogin %}
+                            <li class="twitter"><a href="/user/" target="_blank" ><span class="iconfont icon-gerenzhongxinzhuyegerenziliao"></span></a></li>
+                            <li class="twitter"><a href="/user/logout/"><span class="iconfont icon-denglu"></span></a></li>
+                            {% else %}
+                            <li class="twitter"><a href="/user/index/" ><span class="iconfont icon-denglu1"></span></a></li>
+                            {% endif %}
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>

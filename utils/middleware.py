@@ -1,6 +1,6 @@
 class UrlPathRecordMiddleware(object):
     """记录用户访问地址中间间类"""
-    exclude_path = ['/user/login/', '/user/register/', '/user/logout/']
+    exclude_path = ['/user/index/', '/user/sign-up/', '/user/logout/']
 
     def process_view(self, request, view_func, *view_args, **view_kwargs):
         """记录用户访问地址"""

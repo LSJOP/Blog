@@ -35,6 +35,8 @@
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<link rel="stylesheet" href="{% static 'css/rewrite.css' %}">
+	<link rel="stylesheet" href="{% static 'ALiIcon/iconfont.css' %}">
+	<!--<link rel="stylesheet" href="{% static 'css/custom.css' %}">-->
 
 
 	<!-- Modernizr JS -->
@@ -58,18 +60,24 @@
 	<script type="text/javascript" src="{% static 'js/sha1.js'%}"></script> <!-- sha1加密 -->
 
 
+
+
 <script>
 	$(function () {
 		$('#form').submit(function (event) {
 		    event.preventDefault();  // 阻止表单提交
 			username = $('#username').val()
 			password = hex_sha1($('#password').val())  // 使用sha1加密
-			alert(password)
 			csrf     = $('input[name="csrfmiddlewaretoken"]').val()
 			remember = $('input[name="remember"]').is(':checked')  // 是否记住用户名
 			$.post('/user/login_check/',{'csrfmiddlewaretoken':csrf, 'username':username, 'password':password, 'remember':remember}, function (data){
 				 if(data.res == 1){
-					 window.location = data.pre_url_path  // 登录成功后跳转到登录前页面
+					 if (data.pre_url_path == '/user/index/favicon.ico'){
+				         window.location = '/'  // 跳转到首页
+					 }
+					 else {
+                         window.location = data.pre_url_pat  // 登录成功后跳转到登录前页面
+                     }
 				 }
 				 else{
 					 $('.user_error').html('用户名或密码错误').fadeIn()  // 用户名错误
@@ -81,8 +89,7 @@
 	})
  </script>
 
-
-	</head>
+</head>
 
 
 {% block block %}

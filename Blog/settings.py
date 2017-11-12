@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'social_django',  # 第三登录
     'apps.blog',           # 注册博客应用
     'apps.user',           # 用户模块
+    'djcelery',
 ]
 
 MIDDLEWARE_CLASSES = (

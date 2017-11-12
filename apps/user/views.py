@@ -70,7 +70,7 @@ def register(request, num):
         password = request.POST.get('password')  # 获取密码
         email = request.POST.get('email')   # 获取邮箱
         Passport.objects.add_one_passport(username, password, email)  # 将注册信息保存进数据库
-        # send_register_success_mail(username=username, password=password, email=email)  # 发送注册成功邮件
+        send_register_success_mail(username=username, password=password, email=email)  # 发送注册成功邮件
         return redirect('/user/index/')  # 跳转至登录页面
 
 
@@ -95,3 +95,12 @@ def comment(request, article_id):
     article_id = int(article_id)
     Comment.objects.crate_comment_by_article(name=name, email=email, comment=comment, addr=addr, article_id=article_id)
     return redirect('/')
+
+@login_required
+def user(request):
+    """个人信息页"""
+    username = request.session.get('username')     # 获取用户名
+    passport_id = request.session.get('passport')  # 获取用户id
+    # obj = Address.objects.get_recipient_address(passport_id=passport_id)
+    return render(request, 'build/build.html')
+

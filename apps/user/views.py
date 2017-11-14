@@ -93,7 +93,7 @@ def comment(request, article_id):
     comment = request.POST.get('comment')
     addr = '中国大陆'
     article_id = int(article_id)
-    Comment.objects.crate_comment_by_article(name=name, email=email, comment=comment, addr=addr, article_id=article_id)
+    Comment.objects.create_comment_by_article(name=name, email=email, comment=comment, addr=addr, article_id=article_id)
     return redirect('/')
 
 @login_required

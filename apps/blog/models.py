@@ -192,7 +192,7 @@ class CommentManager(BaseManager):
         else:
             return None
 
-    def crate_comment_by_article(self, comment, name, email, addr, article_id):
+    def create_comment_by_article(self, comment, name, email, addr, article_id):
         """根据文章id添加评论"""
         self.create_one_object(comment=comment, name=name, email=email, addr=addr, article_id=article_id)
 

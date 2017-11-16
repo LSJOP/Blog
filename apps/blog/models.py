@@ -20,7 +20,7 @@ class ClassfiyManager(BaseManager):
         if classfiy_obj_list.exists():
             for classfiy_obj in classfiy_obj_list:
                 # 给分类增加数量属性
-                classfiy_obj.sum = classfiy_obj.article_set.all().aggregate(Sum('classfiy_id'))['classfiy_id__sum']  # 拿到的是一个字典,name__sum是键
+                classfiy_obj.sum = classfiy_obj.article_set.all().filter(classfiy=classfiy_obj.id).count()
             return classfiy_obj_list
         else:
             return None
@@ -36,7 +36,7 @@ class ClassfiyManager(BaseManager):
 
 class Classfiy(BaseModel):
     """文章分类模型"""
-    name = models.CharField(max_length=20, verbose_name='标签')
+    name = models.CharField(max_length=20, verbose_name='文章分类')
 
     objects = ClassfiyManager()
 
@@ -195,6 +195,7 @@ class CommentManager(BaseManager):
     def create_comment_by_article(self, comment, name, email, addr, article_id):
         """根据文章id添加评论"""
         self.create_one_object(comment=comment, name=name, email=email, addr=addr, article_id=article_id)
+        print('create ')
 
 
 class Comment(BaseModel):

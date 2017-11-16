@@ -7,7 +7,7 @@ from django.views.decorators.cache import cache_page  # 导入缓存装饰器
 # Create your views here.
 
 
-@cache_page(60 * 15)  # 缓存15分钟
+# @cache_page(60 * 5)  # 缓存5分钟
 def index(request, pindex):
     """显示首页视图"""
     Article_obj_list = Article.objects.get_article_list(sort='read')  # 获取文章列表
@@ -45,13 +45,13 @@ def index(request, pindex):
                                                'date_list': date_list})
 
 
-@cache_page(60 * 15)  # 缓存15分钟
+# @cache_page(60 * 5)  # 缓存15分钟
 def about(request):
     """关于页面"""
     return render(request, 'blog/about.html')
 
 
-@cache_page(60 * 15)  # 缓存15分钟
+# @cache_page(60 * 5)  # 缓存15分钟
 def blog(request, article_id):
     """博客页面"""
     article = Article.objects.get_one_article(article_id=article_id)  # 通过文章id获取到文章
@@ -88,7 +88,7 @@ def tags(request, tags_id):
     return render(request, 'blog/temp.html', context={'article_list': article_list, 'title': title})
 
 
-@cache_page(60 * 15)  # 缓存15分钟
+# @cache_page(60 * 5)  # 缓存5分钟
 def Contact(request):
     """联系页面"""
     return render(request, 'blog/contact.html')

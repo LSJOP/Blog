@@ -1,3 +1,6 @@
+from django.shortcuts import render
+
+
 class UrlPathRecordMiddleware(object):
     """记录用户访问地址中间间类"""
     exclude_path = ['/user/index/', '/user/sign-up/', '/user/logout/']
@@ -21,3 +24,10 @@ class UrlPathRecordMiddleware(object):
 #             ip = request.META['REMOTE_ADDR']
 
 
+class ExceptionMiddleware(object):
+
+    def process_exception(self, request, exception):
+        """视图函数发生异常时调用"""
+        print(exception)
+        # 返回500页面
+        return render(request, 'error/500.html')

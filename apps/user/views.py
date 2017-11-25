@@ -18,7 +18,6 @@ def login(request, num):
 
 def forgot(request, num):
     """忘记密码视图函数"""
-
     return render(request, 'user/forgot{}.html'.format(num))
 
 
@@ -70,7 +69,7 @@ def register(request, num):
         password = request.POST.get('password')  # 获取密码
         email = request.POST.get('email')   # 获取邮箱
         Passport.objects.add_one_passport(username, password, email)  # 将注册信息保存进数据库
-        send_register_success_mail(username=username, password=password, email=email)  # 发送注册成功邮件
+        send_register_success_mail.delay(username=username, email=email)  # 发送注册成功邮件
         return redirect('/user/index/')  # 跳转至登录页面
 
 

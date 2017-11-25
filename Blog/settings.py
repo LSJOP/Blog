@@ -15,7 +15,6 @@ import os
 import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, BASE_DIR)
-# sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 
@@ -47,7 +46,7 @@ INSTALLED_APPS = [
     'social_django',  # 第三登录
     'apps.blog',           # 注册博客应用
     'apps.user',           # 用户模块
-    'djcelery',
+    'raven.contrib.django.raven_compat',  # 注册sentry
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -60,7 +59,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     "utils.middleware.UrlPathRecordMiddleware",  # 注册记录用户访问地址中间件类
-    # "utils.middleware.ExceptionMiddleware",
+    "utils.middleware.ExceptionMiddleware",
 )
 
 ROOT_URLCONF = 'Blog.urls'
@@ -154,16 +153,33 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-# 配置celery
-import djcelery
-djcelery.setup_loader()
-BROKER_URL = 'redis://127.0.0.1:6379/2'
+
+# 配置Broker
+BROKER_URL = 'redis://127.0.0.1:6379/0'
+BROKER_TRANSPORT = 'redis'
 
 
 # 发送邮件配置
+EMAIL_USE_SSL = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
-EMAIL_PORT = 25
+EMAIL_PORT = 465
+EMAIL_TIMEOUT = 3600  # 设置超时时间
 EMAIL_HOST_USER = '17610898052@163.com'  # 发送邮件的邮箱
 EMAIL_HOST_PASSWORD = 'linsijian233'  # 在邮箱中设置的客户端授权密码
 EMAIL_FROM = '起風了<17610898052@163.com>'  # 收件人看到的发件人
+
+# 导入logging模块
+from .LOGGING import LOGGING
+LOGGING
+
+
+import raven
+
+# sentry设置
+RAVEN_CONFIG = {
+    'dsn': 'http://1f85da6a0cca43859bed9002e188eb0f:85d369b20bb047479079d68d1a9aa31b@127.0.0.1:9000/3',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+}

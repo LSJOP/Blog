@@ -91,6 +91,7 @@ def tags(request, tags_id):
 # @cache_page(60 * 5)  # 缓存5分钟
 def Contact(request):
     """联系页面"""
+    print(1/0)
     return render(request, 'blog/contact.html')
 
 

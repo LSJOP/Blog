@@ -1,0 +1,264 @@
+2017-11-25 17:04:43,574 [Dummy-1:140581936948992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2017-11-25 17:04:43,575 [Dummy-1:140581936948992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2017-11-25 17:04:44,058 [Dummy-1:140581936948992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.018) SHOW FULL TABLES; args=None
+2017-11-25 17:04:44,065 [Dummy-1:140581936948992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.005) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-11-25 17:04:50,018 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2017-11-25 17:04:50,026 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2017-11-25 17:04:50,072 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.030) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '53qssgi3morb99awh3eawbn92vv2oifi' AND `django_session`.`expire_date` > '2017-11-25 17:04:49.988286'); args=('53qssgi3morb99awh3eawbn92vv2oifi', '2017-11-25 17:04:49.988286')
+2017-11-25 17:04:50,083 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.006) SELECT (1) AS `a` FROM `blog_article` LIMIT 1; args=()
+2017-11-25 17:04:50,093 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.008) SELECT `blog_article`.`id`, `blog_article`.`is_delete`, `blog_article`.`create_time`, `blog_article`.`update_time`, `blog_article`.`title`, `blog_article`.`body`, `blog_article`.`excerpt`, `blog_article`.`author_id`, `blog_article`.`classfiy_id`, `blog_article`.`read_num` FROM `blog_article` ORDER BY `blog_article`.`read_num` DESC; args=()
+2017-11-25 17:04:50,096 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT (1) AS `a` FROM `blog_classfiy` LIMIT 1; args=()
+2017-11-25 17:04:50,099 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT `blog_classfiy`.`id`, `blog_classfiy`.`is_delete`, `blog_classfiy`.`create_time`, `blog_classfiy`.`update_time`, `blog_classfiy`.`name` FROM `blog_classfiy`; args=()
+2017-11-25 17:04:50,122 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.017) SELECT COUNT(*) AS `__count` FROM `blog_article` WHERE (`blog_article`.`classfiy_id` = 1 AND `blog_article`.`classfiy_id` = 1); args=(1, 1)
+2017-11-25 17:04:50,140 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) SELECT COUNT(*) AS `__count` FROM `blog_article` WHERE (`blog_article`.`classfiy_id` = 2 AND `blog_article`.`classfiy_id` = 2); args=(2, 2)
+2017-11-25 17:04:50,144 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT COUNT(*) AS `__count` FROM `blog_article` WHERE (`blog_article`.`classfiy_id` = 3 AND `blog_article`.`classfiy_id` = 3); args=(3, 3)
+2017-11-25 17:04:50,149 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT (1) AS `a` FROM `blog_article` LIMIT 1; args=()
+2017-11-25 17:04:50,157 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) SELECT `blog_article`.`id`, `blog_article`.`is_delete`, `blog_article`.`create_time`, `blog_article`.`update_time`, `blog_article`.`title`, `blog_article`.`body`, `blog_article`.`excerpt`, `blog_article`.`author_id`, `blog_article`.`classfiy_id`, `blog_article`.`read_num` FROM `blog_article` ORDER BY `blog_article`.`update_time` ASC; args=()
+2017-11-25 17:04:50,184 [Thread-2:140581918504704] [django.template:929] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'islogin' in template 'blog/index.html'.
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 57, in __getitem__
+    return self._session[key]
+KeyError: 'islogin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'SessionStore' object has no attribute 'islogin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'islogin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [islogin] in '<django.contrib.sessions.backends.db.SessionStore object at 0x7fdbc75107f0>'
+2017-11-25 17:04:50,200 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) SELECT `blog_classfiy`.`id`, `blog_classfiy`.`is_delete`, `blog_classfiy`.`create_time`, `blog_classfiy`.`update_time`, `blog_classfiy`.`name` FROM `blog_classfiy` WHERE `blog_classfiy`.`id` = 2; args=(2,)
+2017-11-25 17:04:50,272 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.007) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 2; args=(2,)
+2017-11-25 17:04:50,319 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 4; args=(4,)
+2017-11-25 17:04:50,341 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT `blog_classfiy`.`id`, `blog_classfiy`.`is_delete`, `blog_classfiy`.`create_time`, `blog_classfiy`.`update_time`, `blog_classfiy`.`name` FROM `blog_classfiy` WHERE `blog_classfiy`.`id` = 1; args=(1,)
+2017-11-25 17:04:50,360 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.018) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 2; args=(2,)
+2017-11-25 17:04:50,407 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.012) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 1; args=(1,)
+2017-11-25 17:04:50,414 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.006) SELECT `blog_classfiy`.`id`, `blog_classfiy`.`is_delete`, `blog_classfiy`.`create_time`, `blog_classfiy`.`update_time`, `blog_classfiy`.`name` FROM `blog_classfiy` WHERE `blog_classfiy`.`id` = 2; args=(2,)
+2017-11-25 17:04:50,418 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 2; args=(2,)
+2017-11-25 17:04:50,425 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 2; args=(2,)
+2017-11-25 17:04:50,432 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) SELECT DISTINCT CAST(DATE_FORMAT(`blog_article`.`create_time`, '%Y-%m-01') AS DATE) AS `datefield` FROM `blog_article` WHERE `blog_article`.`create_time` IS NOT NULL ORDER BY `datefield` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,442 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.008) SELECT `blog_tag`.`id`, `blog_tag`.`is_delete`, `blog_tag`.`create_time`, `blog_tag`.`update_time`, `blog_tag`.`name` FROM `blog_tag` ORDER BY `blog_tag`.`id` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,426 [Thread-2:140581918504704] [django.template:929] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'goods' in template 'blog/index.html'.
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [goods] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fdbc7539b70>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdbc75108d0>, \'backends\': <LazyDict: <function backends.<locals>.<lambda> at 0x7fdbc44e3598>>, \'REDIRECT_FIELD_VALUE\': None, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'DEBUG\': 10, \'WARNING\': 30, \'INFO\': 20, \'ERROR\': 40}, \'request\': <WSGIRequest: GET \'/\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdbc44d0390>, \'REDIRECT_QUERYSTRING\': \'\', \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7fdbc7568bf8>>, \'REDIRECT_FIELD_NAME\': \'next\'}, {}, {\'pages\': range(1, 3), \'date_list\': <QuerySet [datetime.date(2017, 11, 1)]>, \'Classfiy_List\': <QuerySet [<Classfiy: 文学>, <Classfiy: test>, <Classfiy: test1>]>, \'New_Article_List\': [<Article: test1>, <Article: test3>, <Article: test2>, <Article: 如果有来生>], \'tags\': <QuerySet []>, \'Article_obj_list\': <Page 1 of 2>}, {\'block\': <Block Node: body. Contents: [<TextNode: \'\\n\'>, <Block Node: body_id. Contents: [<TextNode: \'<body><!-- 因为有的页面的body有绑定\'>]>, <TextNode: \'\\n\'>, <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>, <TextNode: \'\\n<footer id="site-footer"\'>, <django.templatetags.static.StaticNode object at 0x7fdbc44ec9b0>, <TextNode: \'"></a>\\n                  \'>, <django.templatetags.static.StaticNode object at 0x7fdbc44eca58>, <TextNode: \'"></script>\\n\\n</body>\\n</ht\'>]>}, {\'block\': <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>}, {\'block\': <Block Node: son. Contents: [<TextNode: \'\\n<div class="content-body\'>, <For Node: for Article_obj in Article_obj_list, tail_len: 27>, <TextNode: \'\\n\\n                <!-- 简单\'>, <IfNode>, <TextNode: \'\\n                        \'>, <For Node: for pindex in pages, tail_len: 3>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                        \'>, <Block Node: toc. Contents: [<TextNode: \'<!-- 给文章目录的预留块 -->\'>]>, <TextNode: \'\\n\\n                <div cl\'>, <For Node: for article in New_Article_List, tail_len: 5>, <TextNode: \'\\n                    </ul\'>, <For Node: for date in date_list, tail_len: 9>, <TextNode: \'\\n                    </ul\'>, <For Node: for class in Classfiy_List, tail_len: 7>, <TextNode: \'\\n                    </ul\'>, <For Node: for tag in tags, tail_len: 5>, <TextNode: \'\\n                    </ul\'>]>}]'
+2017-11-25 17:04:50,479 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.010) SELECT DISTINCT CAST(DATE_FORMAT(`blog_article`.`create_time`, '%Y-%m-01') AS DATE) AS `datefield` FROM `blog_article` WHERE `blog_article`.`create_time` IS NOT NULL ORDER BY `datefield` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,481 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT `blog_tag`.`id`, `blog_tag`.`is_delete`, `blog_tag`.`create_time`, `blog_tag`.`update_time`, `blog_tag`.`name` FROM `blog_tag` ORDER BY `blog_tag`.`id` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,467 [Thread-2:140581918504704] [django.template:929] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'goods' in template 'blog/index.html'.
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [goods] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fdbc7539b70>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdbc75108d0>, \'backends\': <LazyDict: <function backends.<locals>.<lambda> at 0x7fdbc44e3598>>, \'REDIRECT_FIELD_VALUE\': None, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'DEBUG\': 10, \'WARNING\': 30, \'INFO\': 20, \'ERROR\': 40}, \'request\': <WSGIRequest: GET \'/\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdbc44d0390>, \'REDIRECT_QUERYSTRING\': \'\', \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7fdbc7568bf8>>, \'REDIRECT_FIELD_NAME\': \'next\'}, {}, {\'pages\': range(1, 3), \'date_list\': <QuerySet [datetime.date(2017, 11, 1)]>, \'Classfiy_List\': <QuerySet [<Classfiy: 文学>, <Classfiy: test>, <Classfiy: test1>]>, \'New_Article_List\': [<Article: test1>, <Article: test3>, <Article: test2>, <Article: 如果有来生>], \'tags\': <QuerySet []>, \'Article_obj_list\': <Page 1 of 2>}, {\'block\': <Block Node: body. Contents: [<TextNode: \'\\n\'>, <Block Node: body_id. Contents: [<TextNode: \'<body><!-- 因为有的页面的body有绑定\'>]>, <TextNode: \'\\n\'>, <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>, <TextNode: \'\\n<footer id="site-footer"\'>, <django.templatetags.static.StaticNode object at 0x7fdbc44ec9b0>, <TextNode: \'"></a>\\n                  \'>, <django.templatetags.static.StaticNode object at 0x7fdbc44eca58>, <TextNode: \'"></script>\\n\\n</body>\\n</ht\'>]>}, {\'block\': <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>}, {\'block\': <Block Node: son. Contents: [<TextNode: \'\\n<div class="content-body\'>, <For Node: for Article_obj in Article_obj_list, tail_len: 27>, <TextNode: \'\\n\\n                <!-- 简单\'>, <IfNode>, <TextNode: \'\\n                        \'>, <For Node: for pindex in pages, tail_len: 3>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                        \'>, <Block Node: toc. Contents: [<TextNode: \'<!-- 给文章目录的预留块 -->\'>]>, <TextNode: \'\\n\\n                <div cl\'>, <For Node: for article in New_Article_List, tail_len: 5>, <TextNode: \'\\n                    </ul\'>, <For Node: for date in date_list, tail_len: 9>, <TextNode: \'\\n                    </ul\'>, <For Node: for class in Classfiy_List, tail_len: 7>, <TextNode: \'\\n                    </ul\'>, <For Node: for tag in tags, tail_len: 5>, <TextNode: \'\\n                    </ul\'>]>}, {\'forloop\': {\'first\': True, \'revcounter\': 2, \'revcounter0\': 1, \'last\': False, \'counter\': 1, \'counter0\': 0, \'parentloop\': {}}, \'pindex\': 1}]'
+2017-11-25 17:04:50,486 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT DISTINCT CAST(DATE_FORMAT(`blog_article`.`create_time`, '%Y-%m-01') AS DATE) AS `datefield` FROM `blog_article` WHERE `blog_article`.`create_time` IS NOT NULL ORDER BY `datefield` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,491 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT `blog_tag`.`id`, `blog_tag`.`is_delete`, `blog_tag`.`create_time`, `blog_tag`.`update_time`, `blog_tag`.`name` FROM `blog_tag` ORDER BY `blog_tag`.`id` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,483 [Thread-2:140581918504704] [django.template:929] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'goods' in template 'blog/index.html'.
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [goods] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fdbc7539b70>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdbc75108d0>, \'backends\': <LazyDict: <function backends.<locals>.<lambda> at 0x7fdbc44e3598>>, \'REDIRECT_FIELD_VALUE\': None, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'DEBUG\': 10, \'WARNING\': 30, \'INFO\': 20, \'ERROR\': 40}, \'request\': <WSGIRequest: GET \'/\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdbc44d0390>, \'REDIRECT_QUERYSTRING\': \'\', \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7fdbc7568bf8>>, \'REDIRECT_FIELD_NAME\': \'next\'}, {}, {\'pages\': range(1, 3), \'date_list\': <QuerySet [datetime.date(2017, 11, 1)]>, \'Classfiy_List\': <QuerySet [<Classfiy: 文学>, <Classfiy: test>, <Classfiy: test1>]>, \'New_Article_List\': [<Article: test1>, <Article: test3>, <Article: test2>, <Article: 如果有来生>], \'tags\': <QuerySet []>, \'Article_obj_list\': <Page 1 of 2>}, {\'block\': <Block Node: body. Contents: [<TextNode: \'\\n\'>, <Block Node: body_id. Contents: [<TextNode: \'<body><!-- 因为有的页面的body有绑定\'>]>, <TextNode: \'\\n\'>, <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>, <TextNode: \'\\n<footer id="site-footer"\'>, <django.templatetags.static.StaticNode object at 0x7fdbc44ec9b0>, <TextNode: \'"></a>\\n                  \'>, <django.templatetags.static.StaticNode object at 0x7fdbc44eca58>, <TextNode: \'"></script>\\n\\n</body>\\n</ht\'>]>}, {\'block\': <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>}, {\'block\': <Block Node: son. Contents: [<TextNode: \'\\n<div class="content-body\'>, <For Node: for Article_obj in Article_obj_list, tail_len: 27>, <TextNode: \'\\n\\n                <!-- 简单\'>, <IfNode>, <TextNode: \'\\n                        \'>, <For Node: for pindex in pages, tail_len: 3>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                        \'>, <Block Node: toc. Contents: [<TextNode: \'<!-- 给文章目录的预留块 -->\'>]>, <TextNode: \'\\n\\n                <div cl\'>, <For Node: for article in New_Article_List, tail_len: 5>, <TextNode: \'\\n                    </ul\'>, <For Node: for date in date_list, tail_len: 9>, <TextNode: \'\\n                    </ul\'>, <For Node: for class in Classfiy_List, tail_len: 7>, <TextNode: \'\\n                    </ul\'>, <For Node: for tag in tags, tail_len: 5>, <TextNode: \'\\n                    </ul\'>]>}, {\'forloop\': {\'first\': False, \'revcounter\': 1, \'revcounter0\': 0, \'last\': True, \'counter\': 2, \'counter0\': 1, \'parentloop\': {}}, \'pindex\': 2}]'
+2017-11-25 17:04:50,515 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.006) SELECT DISTINCT CAST(DATE_FORMAT(`blog_article`.`create_time`, '%Y-%m-01') AS DATE) AS `datefield` FROM `blog_article` WHERE `blog_article`.`create_time` IS NOT NULL ORDER BY `datefield` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,537 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.011) SELECT `blog_tag`.`id`, `blog_tag`.`is_delete`, `blog_tag`.`create_time`, `blog_tag`.`update_time`, `blog_tag`.`name` FROM `blog_tag` ORDER BY `blog_tag`.`id` DESC LIMIT 21; args=()
+2017-11-25 17:04:50,501 [Thread-2:140581918504704] [django.template:929] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'goods' in template 'blog/index.html'.
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'goods'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/LSJOP/local/lib/python3.5/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [goods] in '[{\'True\': True, \'None\': None, \'False\': False}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fdbc7539b70>>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fdbc75108d0>, \'backends\': <LazyDict: <function backends.<locals>.<lambda> at 0x7fdbc44e3598>>, \'REDIRECT_FIELD_VALUE\': None, \'DEFAULT_MESSAGE_LEVELS\': {\'SUCCESS\': 25, \'DEBUG\': 10, \'WARNING\': 30, \'INFO\': 20, \'ERROR\': 40}, \'request\': <WSGIRequest: GET \'/\'>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fdbc44d0390>, \'REDIRECT_QUERYSTRING\': \'\', \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7fdbc7568bf8>>, \'REDIRECT_FIELD_NAME\': \'next\'}, {}, {\'pages\': range(1, 3), \'date_list\': <QuerySet [datetime.date(2017, 11, 1)]>, \'Classfiy_List\': <QuerySet [<Classfiy: 文学>, <Classfiy: test>, <Classfiy: test1>]>, \'New_Article_List\': [<Article: test1>, <Article: test3>, <Article: test2>, <Article: 如果有来生>], \'tags\': <QuerySet []>, \'Article_obj_list\': <Page 1 of 2>}, {\'block\': <Block Node: body. Contents: [<TextNode: \'\\n\'>, <Block Node: body_id. Contents: [<TextNode: \'<body><!-- 因为有的页面的body有绑定\'>]>, <TextNode: \'\\n\'>, <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>, <TextNode: \'\\n<footer id="site-footer"\'>, <django.templatetags.static.StaticNode object at 0x7fdbc44ec9b0>, <TextNode: \'"></a>\\n                  \'>, <django.templatetags.static.StaticNode object at 0x7fdbc44eca58>, <TextNode: \'"></script>\\n\\n</body>\\n</ht\'>]>}, {\'block\': <Block Node: block. Contents: [<TextNode: \'\\n\'>, <Block Node: top. Contents: [<TextNode: \'    \\n<div class="containe\'>, <IfNode>, <TextNode: \'\\n                        \'>]>, <TextNode: \'\\n\\n\\n\'>, <Block Node: son. Contents: [<TextNode: \'<!-- 子模板预留块 -->\'>]>, <TextNode: \'\\n\\n\\n\'>]>}, {\'block\': <Block Node: son. Contents: [<TextNode: \'\\n<div class="content-body\'>, <For Node: for Article_obj in Article_obj_list, tail_len: 27>, <TextNode: \'\\n\\n                <!-- 简单\'>, <IfNode>, <TextNode: \'\\n                        \'>, <For Node: for pindex in pages, tail_len: 3>, <TextNode: \'\\n                        \'>, <IfNode>, <TextNode: \'\\n                        \'>, <Block Node: toc. Contents: [<TextNode: \'<!-- 给文章目录的预留块 -->\'>]>, <TextNode: \'\\n\\n                <div cl\'>, <For Node: for article in New_Article_List, tail_len: 5>, <TextNode: \'\\n                    </ul\'>, <For Node: for date in date_list, tail_len: 9>, <TextNode: \'\\n                    </ul\'>, <For Node: for class in Classfiy_List, tail_len: 7>, <TextNode: \'\\n                    </ul\'>, <For Node: for tag in tags, tail_len: 5>, <TextNode: \'\\n                    </ul\'>]>}]'
+2017-11-25 17:04:50,560 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT DISTINCT CAST(DATE_FORMAT(`blog_article`.`create_time`, '%Y-%m-01') AS DATE) AS `datefield` FROM `blog_article` WHERE `blog_article`.`create_time` IS NOT NULL ORDER BY `datefield` DESC; args=()
+2017-11-25 17:04:50,576 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.013) SELECT `blog_tag`.`id`, `blog_tag`.`is_delete`, `blog_tag`.`create_time`, `blog_tag`.`update_time`, `blog_tag`.`name` FROM `blog_tag` ORDER BY `blog_tag`.`id` DESC; args=()
+2017-11-25 17:04:50,644 [Thread-2:140581918504704] [django.db.backends:90] [utils:execute] [DEBUG]- (0.017) UPDATE `django_session` SET `session_data` = 'YTUwZWNkOWFkY2E2Y2Q2Y2I5ZjIwZjM2NDdkN2NhZjExMTEwOWY0Yzp7InByZV91cmxfcGF0aCI6Ii8ifQ==', `expire_date` = '2017-12-09 17:04:50.580319' WHERE `django_session`.`session_key` = '53qssgi3morb99awh3eawbn92vv2oifi'; args=('YTUwZWNkOWFkY2E2Y2Q2Y2I5ZjIwZjM2NDdkN2NhZjExMTEwOWY0Yzp7InByZV91cmxfcGF0aCI6Ii8ifQ==', '2017-12-09 17:04:50.580319', '53qssgi3morb99awh3eawbn92vv2oifi')
+2017-11-25 17:04:50,720 [Thread-2:140581918504704] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 17:04:50,866 [Thread-3:140581910112000] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+2017-11-25 17:04:50,877 [Thread-4:140581901719296] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/ionicons-2.0.1/css/ionicons.min.css HTTP/1.1" 304 0
+2017-11-25 17:04:50,900 [Thread-5:140581893326592] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/pace.css HTTP/1.1" 304 0
+2017-11-25 17:04:50,945 [Thread-6:140581884933888] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/custom.css HTTP/1.1" 304 0
+2017-11-25 17:04:50,947 [Thread-7:140581876541184] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/rewrite.css HTTP/1.1" 304 0
+2017-11-25 17:04:50,991 [Thread-9:140581884933888] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/ALiIcon/iconfont.css HTTP/1.1" 304 0
+2017-11-25 17:04:51,001 [Thread-8:140581876541184] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/highlights/github.css HTTP/1.1" 304 0
+2017-11-25 17:04:51,023 [Thread-10:140581893326592] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/jquery-2.1.3.min.js HTTP/1.1" 304 0
+2017-11-25 17:04:51,057 [Thread-11:140581884933888] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+2017-11-25 17:04:51,065 [Thread-12:140581876541184] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/modernizr.custom.js HTTP/1.1" 304 0
+2017-11-25 17:04:51,069 [Thread-13:140581884933888] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/pace.min.js HTTP/1.1" 304 0
+2017-11-25 17:04:51,076 [Thread-14:140581876541184] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/script.js HTTP/1.1" 304 0
+2017-11-25 17:04:51,094 [Thread-15:140581884933888] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/img/ghs.png HTTP/1.1" 304 0
+2017-11-25 17:07:39,929 [Dummy-1:140678307776256] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2017-11-25 17:07:39,931 [Dummy-1:140678307776256] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT VERSION(); args=None
+2017-11-25 17:07:40,731 [Dummy-1:140678307776256] [django.db.backends:90] [utils:execute] [DEBUG]- (0.034) SHOW FULL TABLES; args=None
+2017-11-25 17:07:40,744 [Dummy-1:140678307776256] [django.db.backends:90] [utils:execute] [DEBUG]- (0.009) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-11-25 18:11:16,740 [Dummy-1:140222321460992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.004) SELECT @@SQL_AUTO_IS_NULL; args=None
+2017-11-25 18:11:16,753 [Dummy-1:140222321460992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2017-11-25 18:11:17,459 [Dummy-1:140222321460992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.024) SHOW FULL TABLES; args=None
+2017-11-25 18:11:17,475 [Dummy-1:140222321460992] [django.db.backends:90] [utils:execute] [DEBUG]- (0.012) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-11-25 18:16:43,942 [Thread-1:140594504025856] [django.server:131] [basehttp:log_message] [INFO]- "GET /blog/4/ HTTP/1.1" 200 9981
+2017-11-25 18:17:06,008 [Thread-3:140594504025856] [django.server:131] [basehttp:log_message] [INFO]- "GET /blog/1/ HTTP/1.1" 200 12229
+2017-11-25 19:34:17,213 [Thread-1:140321883158272] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 19:34:18,081 [Thread-3:140321874765568] [django.server:131] [basehttp:log_message] [WARNING]- "GET /static/feng.svg HTTP/1.1" 404 1734
+2017-11-25 19:34:21,874 [Thread-4:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /blog/1/ HTTP/1.1" 200 12229
+2017-11-25 19:34:23,747 [Thread-5:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /about/ HTTP/1.1" 200 5408
+2017-11-25 19:34:25,613 [Thread-6:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /blog/1/ HTTP/1.1" 200 12229
+2017-11-25 19:34:34,530 [Thread-7:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 19:34:36,586 [Thread-8:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /about/ HTTP/1.1" 200 5408
+2017-11-25 19:34:37,704 [Thread-9:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /contact/ HTTP/1.1" 200 5142
+2017-11-25 19:34:39,440 [Thread-10:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /user/index/ HTTP/1.1" 200 5352
+2017-11-25 19:34:40,245 [Thread-11:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /user/index/favicon.ico HTTP/1.1" 200 5352
+2017-11-25 19:34:41,970 [Thread-12:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /user/index/favicon.ico HTTP/1.1" 200 5352
+2017-11-25 19:34:44,346 [Thread-13:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /user/index/favicon.ico HTTP/1.1" 200 5352
+2017-11-25 19:34:46,763 [Thread-14:140321883158272] [django.server:131] [basehttp:log_message] [INFO]- "GET /contact/ HTTP/1.1" 200 5142
+2017-11-25 19:34:48,734 [Thread-15:140321866372864] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 19:34:54,067 [Thread-16:140321857980160] [django.server:131] [basehttp:log_message] [INFO]- "GET /blog/1/ HTTP/1.1" 200 12229
+2017-11-25 19:34:55,775 [Thread-19:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 19:34:57,783 [Thread-20:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET /blog/2/ HTTP/1.1" 200 9979
+2017-11-25 19:34:59,624 [Thread-21:140321874765568] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 19:49:38,678 [Thread-1:140684017784576] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 19:49:38,788 [Thread-3:140684017784576] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+2017-11-25 19:49:38,812 [Thread-4:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/ionicons-2.0.1/css/ionicons.min.css HTTP/1.1" 304 0
+2017-11-25 19:49:38,829 [Thread-5:140683927086848] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/pace.css HTTP/1.1" 304 0
+2017-11-25 19:49:38,859 [Thread-6:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/custom.css HTTP/1.1" 304 0
+2017-11-25 19:49:38,872 [Thread-7:140683927086848] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/highlights/github.css HTTP/1.1" 304 0
+2017-11-25 19:49:38,877 [Thread-8:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/rewrite.css HTTP/1.1" 304 0
+2017-11-25 19:49:38,883 [Thread-10:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+2017-11-25 19:49:38,885 [Thread-9:140683927086848] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/ALiIcon/iconfont.css HTTP/1.1" 304 0
+2017-11-25 19:49:38,889 [Thread-11:140684017784576] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/jquery-2.1.3.min.js HTTP/1.1" 304 0
+2017-11-25 19:49:38,911 [Thread-12:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/pace.min.js HTTP/1.1" 304 0
+2017-11-25 19:49:38,931 [Thread-13:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/modernizr.custom.js HTTP/1.1" 304 0
+2017-11-25 19:49:38,950 [Thread-15:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/img/ghs.png HTTP/1.1" 304 0
+2017-11-25 19:49:38,956 [Thread-14:140684017784576] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/script.js HTTP/1.1" 304 0
+2017-11-25 19:50:00,524 [Thread-16:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /blog/4/ HTTP/1.1" 200 9981
+2017-11-25 19:50:06,854 [Thread-17:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 19:50:12,571 [Thread-18:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /user/index/ HTTP/1.1" 200 5352
+2017-11-25 19:50:13,056 [Thread-19:140683935479552] [django.server:131] [basehttp:log_message] [INFO]- "GET /user/index/favicon.ico HTTP/1.1" 200 5352
+2017-11-25 22:01:56,595 [Thread-1:139832995084032] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 22:01:57,256 [Thread-3:139832986691328] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+2017-11-25 22:01:57,272 [Thread-4:139832978298624] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/ionicons-2.0.1/css/ionicons.min.css HTTP/1.1" 304 0
+2017-11-25 22:01:57,298 [Thread-5:139832969905920] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/pace.css HTTP/1.1" 304 0
+2017-11-25 22:01:57,313 [Thread-6:139832961513216] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/rewrite.css HTTP/1.1" 304 0
+2017-11-25 22:01:57,335 [Thread-7:139832953120512] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/jquery-2.1.3.min.js HTTP/1.1" 304 0
+2017-11-25 22:01:57,343 [Thread-8:139832978298624] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/highlights/github.css HTTP/1.1" 304 0
+2017-11-25 22:01:57,348 [Thread-9:139832986691328] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/css/custom.css HTTP/1.1" 304 0
+2017-11-25 22:01:57,379 [Thread-10:139832978298624] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+2017-11-25 22:01:57,403 [Thread-11:139832969905920] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/ALiIcon/iconfont.css HTTP/1.1" 304 0
+2017-11-25 22:01:57,419 [Thread-12:139832953120512] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/pace.min.js HTTP/1.1" 304 0
+2017-11-25 22:01:57,428 [Thread-13:139832978298624] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/modernizr.custom.js HTTP/1.1" 304 0
+2017-11-25 22:01:57,561 [Thread-15:139832953120512] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/js/script.js HTTP/1.1" 304 0
+2017-11-25 22:01:57,605 [Thread-14:139832978298624] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/img/ghs.png HTTP/1.1" 304 0
+2017-11-25 22:02:03,761 [Thread-16:139832978298624] [django.server:131] [basehttp:log_message] [INFO]- "GET /about/ HTTP/1.1" 200 5408
+2017-11-25 22:02:11,983 [Thread-17:139832978298624] [django.server:131] [basehttp:log_message] [INFO]- "GET /contact/ HTTP/1.1" 200 5142
+2017-11-25 22:02:32,666 [Thread-1:139827290830592] [django.server:131] [basehttp:log_message] [INFO]- "GET /contact/ HTTP/1.1" 200 1007
+2017-11-25 22:02:32,780 [Thread-3:139827282437888] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/404/css/htmleaf-demo.css HTTP/1.1" 304 0
+2017-11-25 22:02:32,782 [Thread-4:139827274045184] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/404/css/style.css HTTP/1.1" 304 0
+2017-11-25 22:02:34,233 [Thread-5:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 200 11322
+2017-11-25 22:05:13,843 [Thread-6:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /about/ HTTP/1.1" 200 5408
+2017-11-25 22:05:16,237 [Thread-7:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /contact/ HTTP/1.1" 200 1007
+2017-11-25 22:05:16,600 [Thread-8:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 200 11322
+2017-11-25 22:05:22,220 [Thread-9:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /contact/ HTTP/1.1" 200 1007
+2017-11-25 22:05:22,500 [Thread-10:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 200 11322
+2017-11-25 22:05:25,693 [Thread-11:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 11322
+2017-11-25 22:05:28,500 [Thread-12:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /contact/ HTTP/1.1" 200 1007
+2017-11-25 22:05:28,987 [Thread-13:139827265652480] [django.server:131] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 200 11322

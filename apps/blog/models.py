@@ -3,7 +3,6 @@ from apps.db.base_model import BaseModel
 import markdown
 from django.contrib.auth.models import User
 from django.db import models
-from django.db.models import Sum
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
 

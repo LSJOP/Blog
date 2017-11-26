@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = (
+    'raven.contrib.django.raven_compat.middleware.Sentry404CatchMiddleware',  # 启用sentry404中间件
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -169,17 +170,159 @@ EMAIL_HOST_USER = '17610898052@163.com'  # 发送邮件的邮箱
 EMAIL_HOST_PASSWORD = 'linsijian233'  # 在邮箱中设置的客户端授权密码
 EMAIL_FROM = '起風了<17610898052@163.com>'  # 收件人看到的发件人
 
-# 导入logging模块
-from .LOGGING import LOGGING
-LOGGING
-
-
 import raven
 
 # sentry设置
 RAVEN_CONFIG = {
-    'dsn': 'http://1f85da6a0cca43859bed9002e188eb0f:85d369b20bb047479079d68d1a9aa31b@127.0.0.1:9000/3',
-    # If you are using git, you can also automatically configure the
-    # release based on the git info.
-    'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+    'dsn': 'https://ed7ffcd3d1df4d77be9b17746db3c9da:448d01df93ad41e7ba4cef4d15534d6d@sentry.io/249065'
+}
+
+from raven.contrib.django.raven_compat.models import client
+client.captureException()
+
+# WSGI中间件
+from raven.contrib.django.raven_compat.middleware.wsgi import Sentry
+from django.core.wsgi import get_wsgi_application
+
+application = Sentry(get_wsgi_application())
+
+
+import logging
+import django.utils.log
+import logging.handlers
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+
+    'root': {
+        'level': 'WARNING',
+        'handlers': ['sentry'],
+    },
+
+
+    # 配置打印日志格式
+    'formatters': {
+        'standard': {
+            'format': '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s]- %(message)s'}
+    },
+
+    """
+    格式             描述
+    %(name)s	    记录器的名称
+    %(levelno)s	    数字形式的日志记录级别
+    %(levelname)s	日志记录级别的文本名称
+    %(filename)s	执行日志记录调用的源文件的文件名称
+    %(pathname)s	执行日志记录调用的源文件的路径名称
+    %(funcName)s	执行日志记录调用的函数名称
+    %(module)s	    执行日志记录调用的模块名称
+    %(lineno)s	    执行日志记录调用的行号
+    %(created)s	    执行日志记录的时间
+    %(asctime)s	    日期和时间
+    %(msecs)s	    毫秒部分
+    %(thread)d	    线程ID
+    %(threadName)s	线程名称
+    %(process)d	    进程ID
+    %(message)s	    记录的消息
+    """
+
+    'filters': {
+    },
+
+    # 定义具体处理日志的方式
+    'handlers': {
+        'sentry': {
+            'level': 'ERROR', # To capture more than ERROR, change to WARNING, INFO, etc.
+            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+            'tags': {'custom-tag': 'x'},
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+        'default': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': '/project/Blog/log/all.log',  # 日志输出文件
+            'maxBytes': 1024 * 1024 * 5,  # 文件大小
+            'backupCount': 5,  # 备份份数
+            'formatter': 'standard',  # 使用哪种formatters日志格式
+        },
+        'error': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': '/project/Blog/log/error.log',
+            'maxBytes': 1024 * 1024 * 5,
+            'backupCount': 5,
+            'formatter': 'standard',
+        },
+        'request_handler': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': '/project/Blog/log/script.log',
+            'maxBytes': 1024 * 1024 * 5,
+            'backupCount': 5,
+            'formatter': 'standard',
+        },
+        'scprits_handler': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': '/project/Blog/log/script.log',
+            'maxBytes': 1024 * 1024 * 5,
+            'backupCount': 5,
+            'formatter': 'standard',
+        }
+    },
+
+    # 1.loggers类型为"django"这将处理所有类型日志。
+    # 2.sourceDns.webdns.views 应用的py文件
+    'loggers': {
+        'django.db.backends': {
+            'level': 'ERROR',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'raven': {
+            'level': 'INFO',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'sentry.errors': {
+            'level': 'INFO',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'django': {
+            'handlers': ['default', 'console'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'django.request': {
+            'handlers': ['request_handler'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'scripts': {
+            'handlers': ['scprits_handler'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'sourceDns.webdns.views': {
+            'handlers': ['default', 'error'],
+            'level': 'INFO',
+            'propagate': True
+        },
+        'sourceDns.webdns.util': {
+            'handlers': ['error'],
+            'level': 'ERROR',
+            'propagate': True
+        }
+    }
 }

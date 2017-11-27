@@ -171,25 +171,21 @@ EMAIL_HOST_PASSWORD = 'linsijian233'  # 在邮箱中设置的客户端授权密�
 EMAIL_FROM = '起風了<17610898052@163.com>'  # 收件人看到的发件人
 
 import raven
+import logging
+import django.utils.log
+import logging.handlers
 
 # sentry设置
 RAVEN_CONFIG = {
     'dsn': 'https://ed7ffcd3d1df4d77be9b17746db3c9da:448d01df93ad41e7ba4cef4d15534d6d@sentry.io/249065'
 }
 
+# 捕获celery的错误
+SENTRY_CELERY_LOGLEVEL = logging.INFO
+
 from raven.contrib.django.raven_compat.models import client
 client.captureException()
 
-# WSGI中间件
-from raven.contrib.django.raven_compat.middleware.wsgi import Sentry
-from django.core.wsgi import get_wsgi_application
-
-application = Sentry(get_wsgi_application())
-
-
-import logging
-import django.utils.log
-import logging.handlers
 
 
 LOGGING = {

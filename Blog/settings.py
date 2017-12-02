@@ -183,8 +183,6 @@ RAVEN_CONFIG = {
 # 捕获celery的错误
 SENTRY_CELERY_LOGLEVEL = logging.INFO
 
-from raven.contrib.django.raven_compat.models import client
-client.captureException()
 
 
 
@@ -236,7 +234,7 @@ LOGGING = {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose'
+            'formatter': 'standard'
         },
         'mail_admins': {
             'level': 'ERROR',
